@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ymmgwosj44ts"]
+[gd_scene format=3 uid="uid://ymmgwosj44ts"]
 
 [ext_resource type="PackedScene" uid="uid://dnnt144ejv6q6" path="res://Scenes/joueurtest.tscn" id="1_hxrlc"]
 [ext_resource type="Texture2D" uid="uid://bu5i4ivmojr3i" path="res://Assets/arene_boss.png" id="2_awatw"]
@@ -16,12 +16,12 @@ size = Vector2(942.5, 81.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjf3y"]
 size = Vector2(938.25, 69.5)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=1138818349]
 
-[node name="Area2D" type="StaticBody2D" parent="."]
+[node name="Area2D" type="StaticBody2D" parent="." unique_id=1690623684]
 position = Vector2(44, 168)
 
-[node name="TextureRect" type="TextureRect" parent="Area2D"]
+[node name="TextureRect" type="TextureRect" parent="Area2D" unique_id=2116622798]
 offset_left = -44.0
 offset_top = -168.0
 offset_right = 1108.0
@@ -29,24 +29,24 @@ offset_bottom = 480.0
 texture = ExtResource("2_awatw")
 expand_mode = 2
 
-[node name="CollisionRight" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionRight" type="CollisionShape2D" parent="Area2D" unique_id=925148164]
 position = Vector2(2, 155)
 shape = SubResource("RectangleShape2D_awatw")
 
-[node name="CollisionLeft" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionLeft" type="CollisionShape2D" parent="Area2D" unique_id=532627966]
 position = Vector2(1049.25, 156)
 shape = SubResource("RectangleShape2D_gfa5d")
 
-[node name="CollisionTop" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionTop" type="CollisionShape2D" parent="Area2D" unique_id=1413748194]
 position = Vector2(519.75, -126.75)
 shape = SubResource("RectangleShape2D_v52s1")
 
-[node name="CollisionBottom" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionBottom" type="CollisionShape2D" parent="Area2D" unique_id=470948372]
 position = Vector2(520.125, 445.75)
 shape = SubResource("RectangleShape2D_fjf3y")
 
-[node name="Node2D" parent="." instance=ExtResource("2_mjmem")]
+[node name="Node2D" parent="." unique_id=1213533865 instance=ExtResource("2_mjmem")]
 position = Vector2(80, 334)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_hxrlc")]
+[node name="CharacterBody2D" parent="." unique_id=1678927969 instance=ExtResource("1_hxrlc")]
 position = Vector2(507, 446)
