@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://7slfsi1cu2fq"]
+
+[sub_resource type="Gradient" id="Gradient_beu5a"]
+colors = PackedColorArray(0.9007298, 0.00013515115, 0.7455494, 1, 0.84909, 0.7165212, 0.08040986, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3kf3n"]
+gradient = SubResource("Gradient_beu5a")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_3kf3n")
