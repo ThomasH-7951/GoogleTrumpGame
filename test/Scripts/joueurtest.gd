@@ -29,8 +29,10 @@ func _physics_process(delta: float) -> void:
 	if velocity.x != 0:
 		$AnimatedSprite2D.animation = "walk"
 		$AnimatedSprite2D.flip_h = velocity.x < 0
-	elif velocity.y != 0:
+	elif velocity.y < 0:
 		$AnimatedSprite2D.animation = "up"
+	elif velocity.y > 0:
+		$AnimatedSprite2D.animation = "down"
 	else :
 		$AnimatedSprite2D.animation = "idle"
 	
