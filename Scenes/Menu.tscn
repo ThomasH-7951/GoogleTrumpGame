@@ -1,0 +1,86 @@
+[gd_scene load_steps=10 format=3 uid="uid://7slfsi1cu2fq"]
+
+[sub_resource type="Gradient" id="Gradient_beu5a"]
+colors = PackedColorArray(0.9007298, 0.00013515115, 0.7455494, 1, 0.84909, 0.7165212, 0.08040986, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3kf3n"]
+gradient = SubResource("Gradient_beu5a")
+
+[sub_resource type="LabelSettings" id="LabelSettings_beu5a"]
+font_size = 64
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_beu5a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_beu5a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3kf3n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pedr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_syfuq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2c3o"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_3kf3n")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -218.0
+offset_top = -195.0
+offset_right = 219.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Google Trump"
+label_settings = SubResource("LabelSettings_beu5a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -309.0
+offset_right = 65.0
+offset_bottom = -153.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 40
+
+[node name="StartBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_beu5a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_beu5a")
+text = "Start"
+
+[node name="QuitBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3kf3n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6pedr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_syfuq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_s2c3o")
+text = "Quit"
