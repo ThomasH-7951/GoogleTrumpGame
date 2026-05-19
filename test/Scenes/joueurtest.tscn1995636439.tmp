@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cm2pisdrbnhhh" path="res://Scripts/joueurtest.gd" id="1_orbhi"]
 [ext_resource type="Texture2D" uid="uid://dex26y3u0uwo3" path="res://Assets/side1.png" id="2_drge5"]
 [ext_resource type="Texture2D" uid="uid://cx5p4ulairfnr" path="res://Assets/side2.png" id="3_8dvu6"]
-[ext_resource type="Texture2D" uid="uid://djkcopk8xhr5p" path="res://Assets/Coeur_Vide.png" id="3_bunle"]
 [ext_resource type="Texture2D" uid="uid://fxoigpnhbl7u" path="res://Assets/side3.png" id="4_4vvqe"]
 [ext_resource type="Texture2D" uid="uid://d4lsc36thxshd" path="res://Assets/down.png" id="5_ia0qw"]
 [ext_resource type="Texture2D" uid="uid://bnhp1o8is5syq" path="res://Assets/idle2.png" id="6_bunle"]
@@ -73,8 +72,6 @@ height = 92.0
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=640173649]
 position = Vector2(2, 0)
 script = ExtResource("1_orbhi")
-Coeur_Plein = ExtResource("10_ia0qw")
-Coeur_Vide = ExtResource("3_bunle")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=513463899]
 position = Vector2(-2, -53)
@@ -105,15 +102,15 @@ grow_vertical = 0
 texture = ExtResource("10_ia0qw")
 
 [node name="Coeur2" type="TextureRect" parent="CanvasLayer" unique_id=1580933436]
-offset_left = 129.0
+offset_left = 249.0
 offset_top = 548.0
-offset_right = 229.0
+offset_right = 349.0
 offset_bottom = 648.0
 texture = ExtResource("10_ia0qw")
 
 [node name="Coeur3" type="TextureRect" parent="CanvasLayer" unique_id=1607390898]
-offset_left = 265.0
+offset_left = 129.0
 offset_top = 548.0
-offset_right = 365.0
+offset_right = 229.0
 offset_bottom = 648.0
 texture = ExtResource("10_ia0qw")

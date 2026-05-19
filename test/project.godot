@@ -15,9 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="test"
-run/main_scene="uid://7slfsi1cu2fq"
-config/features=PackedStringArray("4.5", "Forward Plus")
+run/main_scene="uid://ymmgwosj44ts"
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[global_group]
+
+Zone_Degats="Zone dans laquel le joueur prend un domage si il est dedans"
 
 [input]
 
