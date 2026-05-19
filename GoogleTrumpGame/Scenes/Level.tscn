@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://be1yym57ntdvv" path="res://Scenes/mechanttest.tscn" id="2_xylue"]
 [ext_resource type="PackedScene" uid="uid://dnnt144ejv6q6" path="res://Scenes/joueurtest.tscn" id="3_tj5wv"]
 [ext_resource type="PackedScene" uid="uid://bk62ldxc4fcyc" path="res://Scenes/Pause.tscn" id="4_ienac"]
+[ext_resource type="PackedScene" uid="uid://c4cwr7vj03le7" path="res://Scenes/DeathScreen.tscn" id="5_xylue"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_awatw"]
 size = Vector2(92.5, 647)
@@ -54,3 +55,5 @@ position = Vector2(507, 446)
 
 [node name="Pause" parent="." unique_id=1127838092 instance=ExtResource("4_ienac")]
 visible = false
+
+[node name="DeathScreen" parent="." unique_id=1623280358 instance=ExtResource("5_xylue")]
