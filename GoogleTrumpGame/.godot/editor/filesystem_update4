@@ -1,0 +1,5 @@
+res://Scenes/joueurtest.tscn
+res://Scenes/mechanttest.tscn
+res://Scripts/joueurtest.gd
+res://Scripts/mechant.gd
+res://Scripts/path_follow_2d_googletrump.gd

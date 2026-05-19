@@ -19,6 +19,10 @@ run/main_scene="uid://7slfsi1cu2fq"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[global_group]
+
+Zone_Degats="Zone dans laquel le joueur prend un domage si il est dedans"
+
 [input]
 
 ui_left={
