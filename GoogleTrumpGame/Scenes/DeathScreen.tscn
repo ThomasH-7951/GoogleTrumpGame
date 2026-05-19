@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c4cwr7vj03le7"]
 
+[ext_resource type="Script" uid="uid://dhv33vasdq3tv" path="res://Scripts/death_screen.gd" id="1_1d6nr"]
 [ext_resource type="Texture2D" uid="uid://cvnl0xk00rone" path="res://Assets/you_died.png" id="1_4pnsc"]
+[ext_resource type="Texture2D" uid="uid://c7bbg5eu1wbwf" path="res://Assets/45_donald_trump_sprite2-removebg-preview.png" id="2_gb262"]
 
 [sub_resource type="Theme" id="Theme_4pnsc"]
 
@@ -16,6 +18,7 @@ repeat = 2
 metadata/_snap_count = 2
 
 [node name="DeathScreen" type="CanvasLayer" unique_id=1623280358]
+script = ExtResource("1_1d6nr")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1136976385]
 anchors_preset = 15
@@ -39,3 +42,20 @@ offset_bottom = 288.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_4pnsc")
+
+[node name="RestartBtn" type="Button" parent="." unique_id=1289737549]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -110.0
+offset_top = -244.0
+offset_right = 398.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("2_gb262")
+
+[connection signal="button_down" from="RestartBtn" to="." method="_on_restart_btn_button_down"]
