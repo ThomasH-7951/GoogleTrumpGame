@@ -1,10 +1,11 @@
-[gd_scene format=3 uid="uid://be1yym57ntdvv"]
+[gd_scene load_steps=10 format=3 uid="uid://be1yym57ntdvv"]
 
 [ext_resource type="Texture2D" uid="uid://bjgq637d4wmoi" path="res://Assets/45_donald_trump.png" id="1_jcxqs"]
-[ext_resource type="Script" uid="uid://bj0klc4exsaw" path="res://Scripts/PvTrump.gd" id="1_keihd"]
 [ext_resource type="Texture2D" uid="uid://buqdem8oi24tt" path="res://Assets/gtrump_sprite_2.png" id="3_56cqh"]
 [ext_resource type="Script" uid="uid://thk13grfgd6v" path="res://Scripts/path_follow_2d_googletrump.gd" id="4_56cqh"]
 [ext_resource type="Script" uid="uid://12mv3vp0grkh" path="res://Scripts/mechant.gd" id="4_keihd"]
+
+[sub_resource type="GDScript" id="GDScript_cah82"]
 
 [sub_resource type="Curve2D" id="Curve2D_cf1iw"]
 _data = {
@@ -31,24 +32,24 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_56cqh"]
-radius = 43.028442
-height = 122.0141
+radius = 235.47559
+height = 771.9426
 
-[node name="Node2D" type="Node2D" unique_id=1640832070]
+[node name="Node2D" type="Node2D"]
 position = Vector2(240, 360)
-script = ExtResource("1_keihd")
+script = SubResource("GDScript_cah82")
 
-[node name="mobpath" type="Path2D" parent="." unique_id=1432802598]
+[node name="mobpath" type="Path2D" parent="."]
 position = Vector2(-72, -264.00003)
 curve = SubResource("Curve2D_cf1iw")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="mobpath" unique_id=1329641508]
-position = Vector2(931, 325)
+[node name="PathFollow2D" type="PathFollow2D" parent="mobpath"]
+position = Vector2(-88, 56.00003)
 rotation = 2.6183143
 rotates = false
 script = ExtResource("4_56cqh")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mobpath/PathFollow2D" unique_id=2080098108]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mobpath/PathFollow2D"]
 position = Vector2(3.5644531, 127.89551)
 rotation = -2.6183143
 scale = Vector2(0.15288217, 0.1535088)
@@ -57,19 +58,6 @@ frame_progress = 0.5579342
 centered = false
 script = ExtResource("4_keihd")
 
-[node name="Zone_Colision_Trump" type="Area2D" parent="mobpath/PathFollow2D" unique_id=214030229 groups=["Zone_Degats"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mobpath/PathFollow2D/Zone_Colision_Trump" unique_id=868154459]
-position = Vector2(-22.15435, 48.40642)
-rotation = 3.6750863
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mobpath/PathFollow2D/AnimatedSprite2D"]
+position = Vector2(418.62155, 364.80017)
 shape = SubResource("CapsuleShape2D_56cqh")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=327457018]
-
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=57099241]
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 27.0
-grow_horizontal = 2
-max_value = 200.0
-step = 1.0
