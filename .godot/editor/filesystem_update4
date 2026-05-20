@@ -1,0 +1,8 @@
+res://Scenes/Projectile-Joueur.tscn
+res://Scripts/projectile_joueur.gd
+res://Scripts/joueurtest.gd
+res://Scripts/PvTrump.gd
+res://Scenes/mechanttest.tscn
+res://Scenes/joueurtest.tscn
+res://Scenes/Menu.tscn
+res://Scenes/Level.tscn

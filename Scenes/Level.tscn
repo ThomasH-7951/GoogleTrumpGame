@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://ymmgwosj44ts"]
+[gd_scene format=3 uid="uid://17fuw55ooyas"]
 
-[ext_resource type="Texture2D" uid="uid://bu5i4ivmojr3i" path="res://Assets/arene_boss.png" id="1_fuudy"]
-[ext_resource type="PackedScene" uid="uid://be1yym57ntdvv" path="res://Scenes/mechanttest.tscn" id="2_xylue"]
+[ext_resource type="Texture2D" path="res://Assets/arene_boss.png" id="1_fuudy"]
+[ext_resource type="PackedScene" uid="uid://btq8ywcu56tm1" path="res://Scenes/mechanttest.tscn" id="2_xylue"]
 [ext_resource type="PackedScene" uid="uid://dnnt144ejv6q6" path="res://Scenes/joueurtest.tscn" id="3_tj5wv"]
-[ext_resource type="PackedScene" uid="uid://bk62ldxc4fcyc" path="res://Scenes/Pause.tscn" id="4_ienac"]
-[ext_resource type="PackedScene" uid="uid://c4cwr7vj03le7" path="res://Scenes/DeathScreen.tscn" id="5_xylue"]
+[ext_resource type="PackedScene" path="res://Scenes/Pause.tscn" id="4_ienac"]
+[ext_resource type="PackedScene" path="res://Scenes/DeathScreen.tscn" id="5_xylue"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_awatw"]
 size = Vector2(102.25, 647)

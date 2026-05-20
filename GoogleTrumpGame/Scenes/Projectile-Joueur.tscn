@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cq4rmtigyfeli"]
+
+[ext_resource type="Script" uid="uid://dbrubctffkeny" path="res://Scripts/projectile_joueur.gd" id="1_aijqo"]
+[ext_resource type="Texture2D" uid="uid://ckqcvudi55su4" path="res://Assets/Balle_9mm.png" id="1_pel6c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pel6c"]
+size = Vector2(37, 12)
+
+[node name="Balle" type="Area2D" unique_id=1377104902]
+script = ExtResource("1_aijqo")
+
+[node name="Balle9mm" type="Sprite2D" parent="." unique_id=1915476720]
+position = Vector2(21, 0)
+rotation = 1.5707964
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_pel6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1286389626]
+position = Vector2(21.499996, -1.1920935e-07)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_pel6c")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1744897356]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
