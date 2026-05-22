@@ -1,0 +1,7 @@
+res://Scenes/joueurtest.tscn
+res://Scenes/DeathScreen.tscn
+res://Scripts/joueurtest.gd
+res://Scenes/Level.tscn
+res://Scripts/death_screen.gd
+res://Scripts/Jeffrey.gd
+res://Scenes/je.tscn
