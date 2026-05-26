@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bg42s0e0pkhtm"]
+
+[ext_resource type="Script" uid="uid://cfk8p402ohsyi" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/explosion.gd" id="1_y2bna"]
+[ext_resource type="Texture2D" uid="uid://cp32clgohg6pq" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp2_0.png" id="2_o1jyj"]
+[ext_resource type="Texture2D" uid="uid://36ckow0q28xl" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp2.png" id="3_2woqa"]
+[ext_resource type="Texture2D" uid="uid://bo04cdl8wefjf" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp3.png" id="4_qifi7"]
+[ext_resource type="Texture2D" uid="uid://ba3chvtmlb7o1" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp4.png" id="5_8tavj"]
+[ext_resource type="Texture2D" uid="uid://bx6hifi8pvn5d" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp5.png" id="6_id8ya"]
+[ext_resource type="Texture2D" uid="uid://boy4iaaut6wa2" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp6.png" id="7_gvr2l"]
+[ext_resource type="Texture2D" uid="uid://cl31x6sniw20a" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp7.png" id="8_h16dk"]
+[ext_resource type="Texture2D" uid="uid://b27tsa7l3gme0" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp8.png" id="9_u5nox"]
+[ext_resource type="Texture2D" uid="uid://cce6mqg8ha1yh" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp9.png" id="10_mfv08"]
+[ext_resource type="Texture2D" uid="uid://ly833dg2bwrv" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp10.png" id="11_48tsb"]
+[ext_resource type="Texture2D" uid="uid://b6ksnupsd8vmu" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp11.png" id="12_1ovjj"]
+[ext_resource type="Texture2D" uid="uid://c8xoqfsyou4op" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp12.png" id="13_qbl3n"]
+[ext_resource type="Texture2D" uid="uid://dsv3wjdyqnp2i" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp13.png" id="14_xf137"]
+[ext_resource type="Texture2D" uid="uid://mikshv1b6l3j" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp14.png" id="15_a61x2"]
+[ext_resource type="Texture2D" uid="uid://c44ehkbtmki5h" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp15.png" id="16_556qi"]
+[ext_resource type="Texture2D" uid="uid://2na165sibhic" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp16.png" id="17_ay58d"]
+[ext_resource type="AudioStream" uid="uid://dps4e6fllffqd" path="res://Jeu/Trump/Jeffrey/Jeffrey_Assets/explosion.ogg" id="18_ylwia"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7sqm1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o1jyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2woqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qifi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8tavj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_id8ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gvr2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h16dk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u5nox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u5nox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mfv08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_48tsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1ovjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qbl3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xf137")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_a61x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_556qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ay58d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 40.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gpwhy"]
+radius = 26.019224
+
+[node name="Explosion" type="Node2D" unique_id=1719605468]
+scale = Vector2(3, 3)
+script = ExtResource("1_y2bna")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1707417542]
+position = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_7sqm1")
+frame_progress = 0.14044921
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=722995565]
+stream = ExtResource("18_ylwia")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=16065288]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=646653153]
+shape = SubResource("CircleShape2D_gpwhy")
