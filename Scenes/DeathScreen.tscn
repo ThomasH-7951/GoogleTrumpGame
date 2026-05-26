@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c4cwr7vj03le7"]
+
+[ext_resource type="Script" uid="uid://dhv33vasdq3tv" path="res://Scripts/death_screen.gd" id="1_1d6nr"]
+[ext_resource type="Texture2D" uid="uid://cvnl0xk00rone" path="res://Assets/you_died.png" id="1_4pnsc"]
+[ext_resource type="AudioStream" uid="uid://xapj7gcpneql" path="res://Assets/winerr.ogg" id="4_n2kst"]
+[ext_resource type="Texture2D" uid="uid://bjgq637d4wmoi" path="res://Assets/45_donald_trump.png" id="4_phjal"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n2kst"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_phjal"]
+
+[node name="DeathScreen" type="CanvasLayer" unique_id=1623280358]
+script = ExtResource("1_1d6nr")
+
+[node name="YouDied" type="TextureRect" parent="." unique_id=1637176735]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4pnsc")
+expand_mode = 1
+
+[node name="RestartBtn" type="Button" parent="." unique_id=1289737549]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -97.0
+offset_top = -212.0
+offset_right = 395.5
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n2kst")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_phjal")
+icon = ExtResource("4_phjal")
+autowrap_mode = 1
+expand_icon = true
+
+[node name="DS_audio" type="AudioStreamPlayer" parent="." unique_id=135003965]
+stream = ExtResource("4_n2kst")
+
+[connection signal="button_down" from="RestartBtn" to="." method="_on_restart_btn_button_down"]

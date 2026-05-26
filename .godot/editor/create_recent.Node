@@ -1,0 +1,11 @@
+Marker2D
+Area2D
+CollisionShape2D
+Sprite2D
+TextureRect
+AnimatedSprite2D
+Node2D
+Control
+AudioStreamPlayer
+CharacterBody2D
+CanvasLayer
