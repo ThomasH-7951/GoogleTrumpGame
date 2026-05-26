@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://7slfsi1cu2fq"]
+
+[ext_resource type="Script" uid="uid://idl3mu4rixlt" path="res://Scripts/menu.gd" id="1_3kf3n"]
+[ext_resource type="Texture2D" uid="uid://dy06mkht1uep" path="res://Assets/bg.png" id="2_syfuq"]
+[ext_resource type="Texture2D" uid="uid://cr5vn7vothsli" path="res://Assets/ggt.png" id="3_s2c3o"]
+[ext_resource type="AudioStream" uid="uid://dn5xto5xalv1l" path="res://Assets/menu.ogg" id="4_s2c3o"]
+[ext_resource type="AudioStream" uid="uid://bpekcrm0pjds0" path="res://Assets/hello.ogg" id="5_ma218"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_beu5a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3kf3n"]
+
+[node name="Control" type="Control" unique_id=2069254083]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3kf3n")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1044526089]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_syfuq")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1094226304]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -43.0
+offset_right = 92.0
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="StartBtn" type="Button" parent="VBoxContainer" unique_id=1565107678]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_beu5a")
+text = "Start
+"
+
+[node name="QuitBtn" type="Button" parent="VBoxContainer" unique_id=652610950]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3kf3n")
+text = "Quit"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1473407877]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.21300001
+anchor_right = 0.5
+anchor_bottom = 0.21300001
+offset_left = -213.0
+offset_top = -125.024
+offset_right = 222.77826
+offset_bottom = 128.976
+texture = ExtResource("3_s2c3o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=821513062]
+stream = ExtResource("4_s2c3o")
+autoplay = true
+parameters/looping = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1157827783]
+stream = ExtResource("5_ma218")
+autoplay = true
+
+[connection signal="button_down" from="VBoxContainer/StartBtn" to="." method="_on_start_btn_button_down"]
+[connection signal="button_down" from="VBoxContainer/QuitBtn" to="." method="_on_quit_btn_button_down"]
