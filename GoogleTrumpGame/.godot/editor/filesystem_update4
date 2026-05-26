@@ -1,0 +1,9 @@
+<<<<<<< Updated upstream:GoogleTrumpGame/.godot/editor/filesystem_update4
+res://Scenes/DeathScreen.tscn
+res://Scenes/Level.tscn
+=======
+res://Scenes/Level.tscn
+res://Scripts/death_screen.gd
+res://Scenes/DeathScreen.tscn
+res://Scenes/Menu.tscn
+>>>>>>> Stashed changes:.godot/editor/filesystem_update4
