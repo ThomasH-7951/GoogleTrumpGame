@@ -91,7 +91,7 @@ func _physics_process(delta: float) -> void:
 			print("j_touché ! hp : ", hp)
 			update_coeurs()
 			var audio = $degatsound
-			audio.stream = load("res://Assets/degats.ogg")
+			audio.stream = load("res://Jeu/Joueur/Assets_Joueur/degats.ogg")
 			audio.play()
 			if hp==0:
 				game_over()
