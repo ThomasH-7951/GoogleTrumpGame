@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 res://Scenes/Projectile-Joueur.tscn
 res://Scripts/projectile_joueur.gd
 res://Scripts/joueurtest.gd
@@ -6,3 +7,7 @@ res://Scenes/mechanttest.tscn
 res://Scenes/joueurtest.tscn
 res://Scenes/Menu.tscn
 res://Scenes/Level.tscn
+=======
+res://Jeu/Level.tscn
+res://Menus/Start_Menu/menu.gd
+>>>>>>> Stashed changes
