@@ -6,9 +6,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_cf1iw"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 866.9, 510.51233, 0, 0, 0, 0, 82.1, 508.82614, 0, 0, 0, 0, 83.89999, 206.15317, 0, 0, 0, 0, 864.2, 209.52557, 0, 0, 0, 0, 867.8, 512.19855)
+"points": PackedVector2Array(0, 0, 0, 0, 513, 80, 0, 0, 0, 0, 80, 80, 0, 0, 0, 0, 80, 460, 0, 0, 0, 0, 950, 460, 0, 0, 0, 0, 950, 80, 0, 0, 0, 0, 513, 80)
 }
-point_count = 5
+point_count = 6
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ypjg6"]
 atlas = ExtResource("1_jcxqs")
@@ -32,34 +32,46 @@ animations = [{
 radius = 43.028442
 height = 122.0141
 
+[sub_resource type="Curve2D" id="Curve2D_1vuap"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 570, 90, 0, 0, 0, 0, 770, 550, 0, 0, 0, 0, 970, 90, 0, 0, 0, 0, 970, 550, 0, 0, 0, 0, 770, 90, 0, 0, 0, 0, 570, 550, 0, 0, 0, 0, 370, 90, 0, 0, 0, 0, 170, 550, 0, 0, 0, 0, 170, 90, 0, 0, 0, 0, 370, 550, 0, 0, 0, 0, 570, 90)
+}
+point_count = 11
+
 [node name="Trump" type="Node2D" unique_id=1640832070]
 position = Vector2(1, 2)
 script = ExtResource("1_keihd")
+metadata/_edit_vertical_guides_ = [58.0, 1098.0, 1155.0, 1099.0]
+metadata/_edit_horizontal_guides_ = [60.0, 593.0, 652.0]
 
-[node name="TrumpPath" type="Path2D" parent="." unique_id=1432802598]
-position = Vector2(70.77779, -89.51799)
+[node name="PathCarre" type="Path2D" parent="." unique_id=1432802598]
 scale = Vector2(1.111111, 1.1860987)
 curve = SubResource("Curve2D_cf1iw")
 
-[node name="TrumpPathFollow" type="PathFollow2D" parent="TrumpPath" unique_id=1329641508]
-position = Vector2(866.9, 510.51233)
+[node name="TrumpPathFollow" type="PathFollow2D" parent="PathCarre" unique_id=1329641508]
+position = Vector2(513, 80)
 rotation = 2.6183143
 rotates = false
 
-[node name="Trumpsprite" type="AnimatedSprite2D" parent="TrumpPath/TrumpPathFollow" unique_id=2080098108]
-position = Vector2(27.227068, 89.682396)
+[node name="Trumpsprite" type="AnimatedSprite2D" parent="PathCarre/TrumpPathFollow" unique_id=2080098108]
 rotation = -2.6183143
 scale = Vector2(0.15288217, 0.1535088)
 sprite_frames = SubResource("SpriteFrames_cf1iw")
 frame_progress = 0.9119859
-centered = false
 
-[node name="Zone_Colision_Trump" type="Area2D" parent="TrumpPath/TrumpPathFollow" unique_id=214030229 groups=["Zone_Degats"]]
+[node name="Zone_Colision_Trump" type="Area2D" parent="PathCarre/TrumpPathFollow" unique_id=214030229 groups=["Zone_Degats"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TrumpPath/TrumpPathFollow/Zone_Colision_Trump" unique_id=868154459]
-position = Vector2(1.6651318, 9.720795)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathCarre/TrumpPathFollow/Zone_Colision_Trump" unique_id=868154459]
 rotation = 3.6750863
 shape = SubResource("CapsuleShape2D_56cqh")
+
+[node name="PathRandom" type="Path2D" parent="." unique_id=1999982708]
+curve = SubResource("Curve2D_1vuap")
+
+[node name="TrumpPathFollow" type="PathFollow2D" parent="PathRandom" unique_id=1623347095]
+position = Vector2(570, 90)
+rotation = 2.6183143
+rotates = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=327457018]
 

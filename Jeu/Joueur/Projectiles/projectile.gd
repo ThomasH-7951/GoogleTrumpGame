@@ -1,24 +1,19 @@
 extends Area2D
+
 var speed = 2000
 var direction = Vector2.RIGHT
 
 func _ready():
-	global_scale=Vector2(0.05,0.05)
+	global_scale = Vector2(0.05, 0.05)
 	body_entered.connect(_on_balle_body_entered)
 	area_entered.connect(_on_balle_area_entered)
 	
-	if direction == Vector2.RIGHT:
-		rotation = 0
-	elif direction == Vector2.LEFT:
-		rotation = PI
-	elif direction == Vector2.UP:
-		rotation = -PI / 2
-	elif direction == Vector2.DOWN:
-		rotation = PI / 2
+	direction = global_position.direction_to(get_global_mouse_position())
+	rotation = direction.angle()
 
 func _physics_process(delta: float) -> void:
 	global_position += direction * speed * delta
-	
+
 func _on_balle_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Collision"):
 		queue_free()

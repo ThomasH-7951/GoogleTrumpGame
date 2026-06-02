@@ -21,7 +21,7 @@ size = Vector2(1151, 56)
 
 [node name="Node2D" type="Node2D" unique_id=165138805]
 
-[node name="Arene" type="StaticBody2D" parent="." unique_id=1690623684]
+[node name="Arene" type="StaticBody2D" parent="." unique_id=1690623684 groups=["Collision"]]
 
 [node name="Background" type="TextureRect" parent="Arene" unique_id=2116622798]
 anchors_preset = 15
@@ -33,6 +33,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_65ndq")
 expand_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionRight" type="CollisionShape2D" parent="Arene" unique_id=925148164]
 position = Vector2(28.1875, 324.75)
@@ -47,6 +48,7 @@ position = Vector2(570, 30)
 shape = SubResource("RectangleShape2D_v52s1")
 
 [node name="CollisionBottom" type="CollisionShape2D" parent="Arene" unique_id=470948372]
+light_mask = 5
 position = Vector2(576.5, 620)
 shape = SubResource("RectangleShape2D_fjf3y")
 
@@ -62,5 +64,6 @@ parameters/looping = true
 visible = false
 
 [node name="Trump" parent="." unique_id=1288323384 instance=ExtResource("5_65ndq")]
+position = Vector2(0, 0)
 
 [node name="Pause" parent="." unique_id=1127838092 instance=ExtResource("7_g4k58")]

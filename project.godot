@@ -30,6 +30,8 @@ folder_colors={
 [global_group]
 
 Zone_Degats="Zone dans laquel le joueur prend un domage si il est dedans"
+Collision=""
+Joueur=""
 
 [input]
 

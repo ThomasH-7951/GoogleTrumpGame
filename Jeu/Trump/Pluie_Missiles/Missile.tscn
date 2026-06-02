@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cne5j6ua4tbdu"]
+
+[ext_resource type="Script" uid="uid://c4d65dh3bto5x" path="res://Jeu/Trump/Pluie_Missiles/Missile.gd" id="1_ri7kt"]
+[ext_resource type="Texture2D" uid="uid://j0o0oqxxvl81" path="res://Jeu/Trump/Pluie_Missiles/Missile.png" id="1_wuspj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ri7kt"]
+size = Vector2(31, 200)
+
+[node name="Missile" type="Area2D" unique_id=1292174051]
+script = ExtResource("1_ri7kt")
+
+[node name="Missile" type="Sprite2D" parent="." unique_id=1261373086]
+rotation = -3.1415927
+scale = Vector2(0.3, 0.344)
+texture = ExtResource("1_wuspj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1327886256]
+position = Vector2(0.5, 20)
+shape = SubResource("RectangleShape2D_ri7kt")

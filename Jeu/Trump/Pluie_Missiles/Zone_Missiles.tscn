@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://chs3is3r5akj8"]
+
+[ext_resource type="Script" uid="uid://dwvj8a2aal7xd" path="res://Jeu/Trump/Pluie_Missiles/zone_missiles.gd" id="1_mc6mt"]
+
+[node name="ZoneMissiles" type="Area2D" unique_id=583573044]
+script = ExtResource("1_mc6mt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1776731562]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=104808258]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 1, 1, 0.63529414)

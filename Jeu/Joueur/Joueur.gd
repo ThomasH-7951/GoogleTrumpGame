@@ -66,17 +66,13 @@ func _physics_process(delta: float) -> void:
 		if velocity.x > 0:
 			$playersprite.animation = "walk"
 			$playersprite.flip_h = false
-			last_direction = Vector2.RIGHT
 		elif velocity.x < 0:
 			$playersprite.animation = "walk"    
 			$playersprite.flip_h = true
-			last_direction = Vector2.LEFT
 		elif velocity.y < 0:
 			$playersprite.animation = "up"
-			last_direction = Vector2.UP
 		elif velocity.y > 0:
 			$playersprite.animation = "down"
-			last_direction = Vector2.DOWN
 		else:
 			$playersprite.animation = "idle"
 		
@@ -86,14 +82,15 @@ func _physics_process(delta: float) -> void:
 			#print("j_touché :", collision.get_collider().name)
 		global_position = global_position.clamp(Vector2.ZERO, screen_size)	
 	for zone in $Zone_Colision_Joueur.get_overlapping_areas():
-		if zone.is_in_group("Zone_Degats") and can_take_damage :
+		if !is_instance_valid(zone):
+			continue
+		if zone.is_in_group("Zone_Degats") and can_take_damage:
 			hp -= 1
 			print("j_touché ! hp : ", hp)
 			update_coeurs()
-			var audio = $degatsound
-			audio.stream = load("res://Jeu/Joueur/Assets_Joueur/degats.ogg")
-			audio.play()
-			if hp==0:
+			$degatsound.stream = load("res://Jeu/Joueur/Assets_Joueur/degats.ogg")
+			$degatsound.play()
+			if hp <= 0:
 				game_over()
 			
 			$playersprite.play()
@@ -110,7 +107,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("Shooting") and can_shoot:
 		var Projectile_Instance = projectile_scene.instantiate()
 		Projectile_Instance.global_position = Shooting_Point.global_position
-		Projectile_Instance.direction = last_direction
 		owner.add_child(Projectile_Instance)
 		can_shoot = false
 		await get_tree().create_timer(0.1).timeout
