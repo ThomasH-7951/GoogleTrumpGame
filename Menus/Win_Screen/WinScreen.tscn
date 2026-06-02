@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dynidv8kyqspk"]
+
+[sub_resource type="Gradient" id="Gradient_0hhjd"]
+offsets = PackedFloat32Array(0.14377682, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0rred"]
+gradient = SubResource("Gradient_0hhjd")
+fill_from = Vector2(1, 0.5)
+fill_to = Vector2(1, 1)
+repeat = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_eyrxm"]
+font_size = 80
+font_color = Color(0, 1, 1, 1)
+outline_size = 23
+shadow_size = 32
+shadow_color = Color(0.9882353, 0, 0, 1)
+
+[node name="WinScreen" type="CanvasLayer" unique_id=748140998]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1877246303]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_0rred")
+
+[node name="Label" type="Label" parent="." unique_id=419851719]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -273.0
+offset_top = -55.0
+offset_right = 273.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOUUU WIIIIN"
+label_settings = SubResource("LabelSettings_eyrxm")

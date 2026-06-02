@@ -1,8 +1,1 @@
-res://Jeu/Trump/trump.tscn
-res://Jeu/Trump/Trump.gd
-res://Jeu/Trump/Pluie_Missiles/zone_missiles.gd
-res://Jeu/Trump/Pluie_Missiles/Missile.tscn
-res://Jeu/Joueur/Projectiles/Projectile-Joueur.tscn
-res://Jeu/Trump/Pluie_Missiles/Missile.gd
-res://Jeu/Joueur/Joueur.tscn
-res://Jeu/Level.tscn
+res://Menus/Win_Screen/WinScreen.tscn

@@ -1,13 +1,14 @@
+Label
+TextureRect
+CanvasLayer
 CollisionShape2D
 Area2D
 ColorRect
 Node
 Path2D
 PathFollow2D
-CanvasLayer
 Marker2D
 Sprite2D
-TextureRect
 AnimatedSprite2D
 Node2D
 Control
