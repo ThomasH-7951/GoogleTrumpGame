@@ -1,3 +1,4 @@
-res://Menus/Prologue/prologue.tscn
-res://Menus/Start_Menu/menu.gd
-res://Menus/Death_Screen/death_screen.gd
+res://Jeu/Level.tscn
+res://Jeu/Trump/Trump.gd
+res://Menus/Win_Screen/win_screen.gd
+res://Menus/Win_Screen/WinScreen.tscn

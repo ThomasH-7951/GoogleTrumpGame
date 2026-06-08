@@ -10,6 +10,7 @@ var hp = 200:
 		$CanvasLayer/ProgressBar.value = hp
 		if hp <= 0:
 			print("boss mort !")
+			game_win()
 @export var speed := 600.0
 var jeff = preload("res://Jeu/Trump/Jeffrey/JeffreyEpstein.tscn")
 var jeff_encours: Node2D = null
@@ -17,6 +18,11 @@ const CENTRE := Vector2(570, 90)
 var path_follows : Array[PathFollow2D] = []
 var path_index := 0
 var en_transition := false
+
+@onready var win_screen = $"../WinScreen"
+func game_win():
+	get_tree().paused = true
+	win_screen.show()
 
 func _ready() -> void:
 	add_to_group("boss")

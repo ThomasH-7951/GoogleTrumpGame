@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cwh25bghv6vs2" path="res://Jeu/trump boss-01.ogg" id="3_d1tls"]
 [ext_resource type="PackedScene" uid="uid://c4cwr7vj03le7" path="res://Menus/Death_Screen/DeathScreen.tscn" id="4_w1qy2"]
 [ext_resource type="PackedScene" uid="uid://ctkb5ccb1bsje" path="res://Jeu/Trump/trump.tscn" id="5_65ndq"]
+[ext_resource type="PackedScene" uid="uid://dynidv8kyqspk" path="res://Menus/Win_Screen/WinScreen.tscn" id="5_uke1v"]
 [ext_resource type="PackedScene" uid="uid://bk62ldxc4fcyc" path="res://Menus/Pause_Menu/Pause.tscn" id="7_g4k58"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_awatw"]
@@ -61,6 +62,9 @@ autoplay = true
 parameters/looping = true
 
 [node name="DeathScreen" parent="." unique_id=1623280358 instance=ExtResource("4_w1qy2")]
+visible = false
+
+[node name="WinScreen" parent="." unique_id=748140998 instance=ExtResource("5_uke1v")]
 visible = false
 
 [node name="Trump" parent="." unique_id=1288323384 instance=ExtResource("5_65ndq")]

@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://dynidv8kyqspk"]
 
+[ext_resource type="Script" uid="uid://csusfbkpqce3q" path="res://Menus/Win_Screen/win_screen.gd" id="1_eyrxm"]
+[ext_resource type="Texture2D" uid="uid://cp32clgohg6pq" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp2_0.png" id="2_5a46c"]
+
 [sub_resource type="Gradient" id="Gradient_0hhjd"]
 offsets = PackedFloat32Array(0.14377682, 1)
 colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
@@ -18,6 +21,7 @@ shadow_size = 32
 shadow_color = Color(0.9882353, 0, 0, 1)
 
 [node name="WinScreen" type="CanvasLayer" unique_id=748140998]
+script = ExtResource("1_eyrxm")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1877246303]
 anchors_preset = 15
@@ -41,3 +45,19 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "YOUUU WIIIIN"
 label_settings = SubResource("LabelSettings_eyrxm")
+
+[node name="Button" type="Button" parent="." unique_id=354806512]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = 154.0
+offset_right = 4.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_5a46c")
+
+[connection signal="button_down" from="Button" to="." method="_on_menu_button_button_down"]
