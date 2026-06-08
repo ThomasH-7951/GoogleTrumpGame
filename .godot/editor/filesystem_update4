@@ -1,1 +1,3 @@
-res://Menus/Win_Screen/WinScreen.tscn
+res://Menus/Prologue/prologue.tscn
+res://Menus/Start_Menu/menu.gd
+res://Menus/Death_Screen/death_screen.gd

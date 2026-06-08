@@ -5,7 +5,9 @@ func dead():
 	get_tree().paused = true
 	show()
 	
-
+func _input(event):
+	if event.is_action_pressed("Espace"):
+		_on_restart_btn_button_down()
 
 func _ready() -> void:
 	visibility_changed.connect(_on_visibility_changed)

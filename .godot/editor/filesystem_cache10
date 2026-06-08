@@ -1,14 +1,14 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1780405339
+::res://::1780901227
 icon.svg::CompressedTexture2D::7418079300823305913::1780405276::1780405343::1::::<><><>0<>0<>602e96f782c14412d7e3384112bfc805<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Jeu/::1780405276
+::res://Jeu/::1780405343
 arene_boss.png::CompressedTexture2D::3852666866232917740::1780405276::1780405343::1::::<><><>0<>0<>d0ac2e5488faa8caeef3942116fa475f<>res://.godot/imported/arene_boss.png-269f4fe8610a133672a907e7b954f358.ctex::
 Level.tscn::PackedScene::1710045277010125124::1780405276::0::1::::<><><>0<>0<><>::uid://bu5i4ivmojr3i::::res://Jeu/arene_boss.png<>uid://dnnt144ejv6q6::::res://Jeu/Joueur/Joueur.tscn<>uid://cwh25bghv6vs2::::res://Jeu/trump boss-01.ogg<>uid://c4cwr7vj03le7::::res://Menus/Death_Screen/DeathScreen.tscn<>uid://ctkb5ccb1bsje::::res://Jeu/Trump/trump.tscn<>uid://bk62ldxc4fcyc::::res://Menus/Pause_Menu/Pause.tscn
 trump boss-01.ogg::AudioStreamOggVorbis::6333139566462705403::1780405276::1780405341::1::::<><><>0<>0<>9881bce638c9451552783304e3691550<>res://.godot/imported/trump boss-01.ogg-7448eff81909935b602c46be8a0e4581.oggvorbisstr::
 ::res://Jeu/Joueur/::1780405276
 Joueur.gd::GDScript::5671771682473914473::1780405276::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Joueur.tscn::PackedScene::8099755550851704115::1780405276::0::1::::<><><>0<>0<><>::uid://cm2pisdrbnhhh::::res://Jeu/Joueur/Joueur.gd<>uid://dex26y3u0uwo3::::res://Jeu/Joueur/Assets_Joueur/side1.png<>uid://cx5p4ulairfnr::::res://Jeu/Joueur/Assets_Joueur/side2.png<>uid://djkcopk8xhr5p::::res://Jeu/Joueur/Assets_Joueur/Coeur_Vide.png<>uid://fxoigpnhbl7u::::res://Jeu/Joueur/Assets_Joueur/side3.png<>uid://cdejh822y4q3h::::res://Jeu/Joueur/Assets_Joueur/damage.png<>uid://d4lsc36thxshd::::res://Jeu/Joueur/Assets_Joueur/down.png<>uid://bnhp1o8is5syq::::res://Jeu/Joueur/Assets_Joueur/idle2.png<>uid://cnhtd40jkpufk::::res://Jeu/Joueur/Assets_Joueur/down2.png<>uid://coeleus13bkf6::::res://Jeu/Joueur/Assets_Joueur/idle 1.png<>uid://butq58pwopnh0::::res://Jeu/Joueur/Assets_Joueur/up1.png<>uid://c2slshnhetoly::::res://Jeu/Joueur/Assets_Joueur/up2.png<>uid://bxlftr13rcdfs::::res://Jeu/Joueur/Assets_Joueur/Coeur_Plein.png<>uid://3w1tnti1fsqq::::res://Jeu/Joueur/Assets_Joueur/up3.png
-::res://Jeu/Joueur/Assets_Joueur/::1780405276
+::res://Jeu/Joueur/Assets_Joueur/::1780405344
 Coeur_Plein.png::CompressedTexture2D::4023810692067387880::1780405276::1780405343::1::::<><><>0<>0<>2309ab2ab5e45641ffb5e97f333c5be9<>res://.godot/imported/Coeur_Plein.png-28c74c5d43291453a9e565ae780cea6b.ctex::
 Coeur_Vide.png::CompressedTexture2D::7811752661291090711::1780405276::1780405344::1::::<><><>0<>0<>f6cce5a1e4e1f4450b899b41f10bddbd<>res://.godot/imported/Coeur_Vide.png-b72dffc9244fb6315e6d2d5d47dd7a41.ctex::
 damage.png::CompressedTexture2D::4992226139049032583::1780405276::1780405344::1::::<><><>0<>0<>9e812a9d8f76a867e3ee22c2151fa9c9<>res://.godot/imported/damage.png-afb555a8f047b67ba6d9f9efe30f2b06.ctex::
@@ -24,7 +24,7 @@ side3.png::CompressedTexture2D::399289569695741528::1780405276::1780405344::1:::
 up1.png::CompressedTexture2D::3830447536943808659::1780405276::1780405344::1::::<><><>0<>0<>e92f24f46f85838b46a293bee36701e9<>res://.godot/imported/up1.png-74be4ee2d060cc4fe4a11d1cd30d2e9b.ctex::
 up2.png::CompressedTexture2D::6705799364466936766::1780405276::1780405344::1::::<><><>0<>0<>8b662431c61891c719b82144777d3447<>res://.godot/imported/up2.png-1a7cbd770e97a0ffdcf551b07d4e60bd.ctex::
 up3.png::CompressedTexture2D::2012317216903624704::1780405276::1780405344::1::::<><><>0<>0<>2bc4bc26433d57702b6852165922d700<>res://.godot/imported/up3.png-2ca72571c9487ebdad9b9ee7b0a1e926.ctex::
-::res://Jeu/Joueur/Projectiles/::1780405276
+::res://Jeu/Joueur/Projectiles/::1780405345
 Balle_9mm.png::CompressedTexture2D::2799846621425883826::1780405276::1780405345::1::::<><><>0<>0<>eb8f1c7be7c69454edbcc1944305fb95<>res://.godot/imported/Balle_9mm.png-e603de5f191110bae44793362506f20f.ctex::
 Projectile-Joueur.tscn::PackedScene::1083982561966677380::1780405276::0::1::::<><><>0<>0<><>::uid://c6rphkcpad4x0::::res://Jeu/Joueur/Projectiles/projectile.gd<>uid://bf5jcg5ud40bu::::res://Jeu/Joueur/Projectiles/Balle_9mm.png
 projectile.gd::GDScript::6984713726437847315::1780405276::0::1::::<>Area2D<><>0<>0<><>::
@@ -32,13 +32,13 @@ projectile.gd::GDScript::6984713726437847315::1780405276::0::1::::<>Area2D<><>0<
 mechanttest.tscn::PackedScene::6275570238489205606::1780405276::0::1::::<><><>0<>0<><>::uid://3hpvyhyhvb1t::::res://Menus/Pause_Menu/pause.gd
 Trump.gd::GDScript::90304608353138806::1780405276::0::1::::<>Node2D<><>0<>0<><>::
 trump.tscn::PackedScene::6127187573075878214::1780405276::0::1::::<><><>0<>0<><>::uid://bjgq637d4wmoi::::res://Jeu/Trump/Assets_Trump/45_donald_trump.png<>uid://bj0klc4exsaw::::res://Jeu/Trump/Trump.gd<>uid://c7bbg5eu1wbwf::::res://Jeu/Trump/Assets_Trump/45_donald_trump2.png
-::res://Jeu/Trump/Assets_Trump/::1780405276
+::res://Jeu/Trump/Assets_Trump/::1780405345
 45_donald_trump2.png::CompressedTexture2D::7021021756137535813::1780405276::1780405345::1::::<><><>0<>0<>ec3ada1b76dec65c69e68b2870774230<>res://.godot/imported/45_donald_trump2.png-bfe33e6bbf076dec4d7206e0b8cf77a6.ctex::
 45_donald_trump.png::CompressedTexture2D::3031534894718550772::1780405276::1780405345::1::::<><><>0<>0<>9a3ace74327bfb67ed624253804fd831<>res://.godot/imported/45_donald_trump.png-07d26b06f9b7e5995572d8d3a80cd9b3.ctex::
 ::res://Jeu/Trump/Jeffrey/::1780405276
 JeffreyEpstein.gd::GDScript::1881415743343548671::1780405276::0::1::::<>CharacterBody2D<><>0<>0<><>::
 JeffreyEpstein.tscn::PackedScene::1392170821359400128::1780405276::0::1::::<><><>0<>0<><>::uid://12mv3vp0grkh::::res://Jeu/Trump/Jeffrey/JeffreyEpstein.gd<>uid://dtr0h3u82oaew::::res://Jeu/Trump/Jeffrey/Jeffrey_Assets/je.png<>uid://bynwu2qrkt8jo::::res://Jeu/Trump/Jeffrey/Jeffrey_Assets/je2.png<>uid://dsgej4j3hn5u7::::res://Jeu/Trump/Jeffrey/Jeffrey_Assets/je_damage.ogg<>uid://bly8p8c6tra11::::res://Jeu/Trump/Jeffrey/Jeffrey_Assets/jumpscare.ogg
-::res://Jeu/Trump/Jeffrey/Jeffrey_Assets/::1780405276
+::res://Jeu/Trump/Jeffrey/Jeffrey_Assets/::1780405345
 Anvil Drop (AnimeCartoon Sound) - Sound Effect for editing.mp3::AudioStreamMP3::2817015183377595476::1780405276::1780405341::1::::<><><>0<>0<>9855e58d20f66c52b722cc915479ac27<>res://.godot/imported/Anvil Drop (AnimeCartoon Sound) - Sound Effect for editing.mp3-e597b50d240de2e7747177c1ed473097.mp3str::
 explosion.ogg::AudioStreamOggVorbis::8251023077651280687::1780405276::1780405341::1::::<><><>0<>0<>e5932cd5442badb5ca491e570c4b1fc2<>res://.godot/imported/explosion.ogg-c7c3e7446bc7c24f0dfbd1d64c27299c.oggvorbisstr::
 je2.png::CompressedTexture2D::4099162775161490844::1780405276::1780405345::1::::<><><>0<>0<>8da8f8ad4f3a70e5b4e064d752e601dc<>res://.godot/imported/je2.png-e1e6c016480ba45a2bf0994f97c11c9a.ctex::
@@ -49,7 +49,7 @@ jumpscare.ogg::AudioStreamOggVorbis::3210075215273479846::1780405276::1780405341
 ::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/::1780405276
 explosion.gd::GDScript::5146461373829855032::1780405276::0::1::::<>Node2D<><>0<>0<><>::
 explosion.tscn::PackedScene::2869093523903315214::1780405276::0::1::::<><><>0<>0<><>::uid://cfk8p402ohsyi::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/explosion.gd<>uid://cp32clgohg6pq::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp2_0.png<>uid://36ckow0q28xl::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp2.png<>uid://bo04cdl8wefjf::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp3.png<>uid://ba3chvtmlb7o1::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp4.png<>uid://bx6hifi8pvn5d::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp5.png<>uid://boy4iaaut6wa2::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp6.png<>uid://cl31x6sniw20a::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp7.png<>uid://b27tsa7l3gme0::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp8.png<>uid://cce6mqg8ha1yh::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp9.png<>uid://ly833dg2bwrv::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp10.png<>uid://b6ksnupsd8vmu::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp11.png<>uid://c8xoqfsyou4op::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp12.png<>uid://dsv3wjdyqnp2i::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp13.png<>uid://mikshv1b6l3j::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp14.png<>uid://c44ehkbtmki5h::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp15.png<>uid://2na165sibhic::::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp16.png<>uid://dps4e6fllffqd::::res://Jeu/Trump/Jeffrey/Jeffrey_Assets/explosion.ogg
-::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/::1780405276
+::res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/::1780405345
 exp2.png::CompressedTexture2D::2029423394636307989::1780405276::1780405345::1::::<><><>0<>0<>149512d9f52923cb490b902230e16bd5<>res://.godot/imported/exp2.png-314122b2246376ace50ee38c4eb5d989.ctex::
 exp2_0.png::CompressedTexture2D::5885120117134266474::1780405276::1780405345::1::::<><><>0<>0<>978684a080f9d532d83fe88ca3c81778<>res://.godot/imported/exp2_0.png-3b37d3563b0c863ca95f90e41b32a62a.ctex::
 exp3.png::CompressedTexture2D::3422438478946916779::1780405276::1780405345::1::::<><><>0<>0<>e75ed3543b332a17bfdf7602958432c7<>res://.godot/imported/exp3.png-fc0e867ad9f7b2ed70122418d090dc79.ctex::
@@ -66,27 +66,31 @@ exp13.png::CompressedTexture2D::8467753011119435394::1780405276::1780405342::1::
 exp14.png::CompressedTexture2D::859420861195052789::1780405276::1780405342::1::::<><><>0<>0<>b1213e9d88c1852f4b5974d1708a7d02<>res://.godot/imported/exp14.png-904119db9685e55518c554987b9dcc6a.ctex::
 exp15.png::CompressedTexture2D::6868440683943293139::1780405276::1780405342::1::::<><><>0<>0<>9a912f21418d9ac80315d3cf0bacfdfc<>res://.godot/imported/exp15.png-27e8f51b88c7fb7a0e8042b620cc91fb.ctex::
 exp16.png::CompressedTexture2D::1921983795067741686::1780405276::1780405342::1::::<><><>0<>0<>b091ca982b4e94fe547bce56a70253e5<>res://.godot/imported/exp16.png-6f5b0441381c43554b9e3443523689ba.ctex::
-::res://Jeu/Trump/Pluie_Missiles/::1780405276
+::res://Jeu/Trump/Pluie_Missiles/::1780405342
 Missile.gd::GDScript::6816446936402201395::1780405276::0::1::::<>Area2D<><>0<>0<><>::
 Missile.png::CompressedTexture2D::684204480460501152::1780405276::1780405342::1::::<><><>0<>0<>7681a29b81faccec0a761015eab5456e<>res://.godot/imported/Missile.png-beae1f746b2a7a1d1b9d393a29c78196.ctex::
 Missile.tscn::PackedScene::5695393086784444774::1780405276::0::1::::<><><>0<>0<><>::uid://c4d65dh3bto5x::::res://Jeu/Trump/Pluie_Missiles/Missile.gd<>uid://j0o0oqxxvl81::::res://Jeu/Trump/Pluie_Missiles/Missile.png
 zone_missiles.gd::GDScript::8747373969795220009::1780405276::0::1::::<>Area2D<><>0<>0<><>::
 Zone_Missiles.tscn::PackedScene::5303037424061535355::1780405276::0::1::::<><><>0<>0<><>::uid://dwvj8a2aal7xd::::res://Jeu/Trump/Pluie_Missiles/zone_missiles.gd
-::res://Menus/::1780405276
+::res://Menus/::1780901167
 ::res://Menus/Death_Screen/::1780405276
 DeathScreen.tscn::PackedScene::6813814434366044196::1780405276::0::1::::<><><>0<>0<><>::uid://dhv33vasdq3tv::::res://Menus/Death_Screen/death_screen.gd<>uid://cvnl0xk00rone::::res://Menus/Death_Screen/Death_Screen_Assets/you_died.png<>uid://xapj7gcpneql::::res://Menus/Death_Screen/Death_Screen_Assets/winerr.ogg<>uid://bjgq637d4wmoi::::res://Jeu/Trump/Assets_Trump/45_donald_trump.png
 death_screen.gd::GDScript::7695687071220444795::1780405276::0::1::::<>CanvasLayer<><>0<>0<><>::
-::res://Menus/Death_Screen/Death_Screen_Assets/::1780405276
+::res://Menus/Death_Screen/Death_Screen_Assets/::1780405343
 winerr.ogg::AudioStreamOggVorbis::1615271920838848979::1780405276::1780405341::1::::<><><>0<>0<>d1ef504d9376676e01964fccbe41eaab<>res://.godot/imported/winerr.ogg-61dd4192bdb672aa410848089c4797c6.oggvorbisstr::
 you_died.png::CompressedTexture2D::6274357751010789038::1780405276::1780405343::1::::<><><>0<>0<>31766e6a0165a715233854c02a3bf90a<>res://.godot/imported/you_died.png-110d44e99972be1a647a07b63b4658ac.ctex::
 ::res://Menus/Pause_Menu/::1780405276
 pause.gd::GDScript::1980687795181491299::1780405276::0::1::::<>CanvasLayer<><>0<>0<><>::
 Pause.tscn::PackedScene::3153964026217302578::1780405276::0::1::::<><><>0<>0<><>::uid://3hpvyhyhvb1t::::res://Menus/Pause_Menu/pause.gd
+::res://Menus/Prologue/::1780901167
+prologue.tscn::PackedScene::8211527095721392718::1780901167::0::1::::<><><>0<>0<><>::
 ::res://Menus/Start_Menu/::1780405276
 menu.gd::GDScript::568422434033183061::1780405276::0::1::::<>Control<><>0<>0<><>::
 Menu.tscn::PackedScene::2283879570843616934::1780405276::0::1::::<><><>0<>0<><>::uid://idl3mu4rixlt::::res://Menus/Start_Menu/menu.gd<>uid://dy06mkht1uep::::res://Menus/Start_Menu/Start_Menu_Assets/bg.png<>uid://cr5vn7vothsli::::res://Menus/Start_Menu/Start_Menu_Assets/ggt.png<>uid://dn5xto5xalv1l::::res://Menus/Start_Menu/Start_Menu_Assets/menu.ogg<>uid://bpekcrm0pjds0::::res://Menus/Start_Menu/Start_Menu_Assets/hello.ogg
-::res://Menus/Start_Menu/Start_Menu_Assets/::1780405276
+::res://Menus/Start_Menu/Start_Menu_Assets/::1780405344
 bg.png::CompressedTexture2D::261685527514474567::1780405276::1780405344::1::::<><><>0<>0<>485da9259b6668de33a9d383c0e0955e<>res://.godot/imported/bg.png-29aef269ba1861ebc21c4f639d929f10.ctex::
 ggt.png::CompressedTexture2D::6029283027873285294::1780405276::1780405344::1::::<><><>0<>0<>e0303fffd83c0d61097add48f9675ee9<>res://.godot/imported/ggt.png-576ac00cc950f199d7ecdf1b23826659.ctex::
 hello.ogg::AudioStreamOggVorbis::3448122503386194273::1780405276::1780405341::1::::<><><>0<>0<>a95ce19d1ad3ab12e2290530205c397c<>res://.godot/imported/hello.ogg-4250496d4024b1b76137b64f9fa065ea.oggvorbisstr::
 menu.ogg::AudioStreamOggVorbis::8135079554629845899::1780405276::1780405341::1::::<><><>0<>0<>a89f5b5a05f6bdacc2961992e34d888d<>res://.godot/imported/menu.ogg-c403ab24358e4efe482b84571b46e321.oggvorbisstr::
+::res://Menus/Win_Screen/::1780405965
+WinScreen.tscn::PackedScene::8871123456974679120::1780405965::0::1::::<><><>0<>0<><>::

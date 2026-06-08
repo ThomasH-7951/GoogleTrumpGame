@@ -1,6 +1,6 @@
+CanvasLayer
 Label
 TextureRect
-CanvasLayer
 CollisionShape2D
 Area2D
 ColorRect
@@ -12,4 +12,3 @@ Sprite2D
 AnimatedSprite2D
 Node2D
 Control
-AudioStreamPlayer
