@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c6rphkcpad4x0" path="res://Jeu/Joueur/Projectiles/projectile.gd" id="1_apkhl"]
 [ext_resource type="Texture2D" uid="uid://bf5jcg5ud40bu" path="res://Jeu/Joueur/Projectiles/Balle_9mm.png" id="2_repjx"]
+[ext_resource type="AudioStream" uid="uid://d1s0vk2fil0ab" path="res://Assets/hit.ogg" id="3_mxeu6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kpoo"]
 size = Vector2(55, 111)
@@ -16,3 +17,8 @@ texture = ExtResource("2_repjx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=886052591]
 position = Vector2(158.5, 3.5)
 shape = SubResource("RectangleShape2D_8kpoo")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=556421931]
+
+[node name="bulletsound" type="AudioStreamPlayer" parent="." unique_id=903140990]
+stream = ExtResource("3_mxeu6")

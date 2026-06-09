@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://7slfsi1cu2fq"]
+
+[ext_resource type="Script" uid="uid://idl3mu4rixlt" path="res://Scripts/menu.gd" id="1_3kf3n"]
+
+[sub_resource type="Gradient" id="Gradient_beu5a"]
+colors = PackedColorArray(0.9007298, 0.00013515115, 0.7455494, 1, 0.84909, 0.7165212, 0.08040986, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3kf3n"]
+gradient = SubResource("Gradient_beu5a")
+
+[sub_resource type="LabelSettings" id="LabelSettings_beu5a"]
+font_size = 64
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_beu5a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3kf3n"]
+
+[node name="Control" type="Control" unique_id=2069254083]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3kf3n")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1044526089]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_3kf3n")
+
+[node name="Title" type="Label" parent="." unique_id=1553698148]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -218.0
+offset_top = -195.0
+offset_right = 219.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Google Trump"
+label_settings = SubResource("LabelSettings_beu5a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1094226304]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -43.0
+offset_right = 92.0
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="StartBtn" type="Button" parent="VBoxContainer" unique_id=1565107678]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_beu5a")
+text = "Start"
+
+[node name="QuitBtn" type="Button" parent="VBoxContainer" unique_id=652610950]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3kf3n")
+text = "Quit"
+
+[connection signal="button_down" from="VBoxContainer/StartBtn" to="." method="_on_start_btn_button_down"]
+[connection signal="button_down" from="VBoxContainer/QuitBtn" to="." method="_on_quit_btn_button_down"]

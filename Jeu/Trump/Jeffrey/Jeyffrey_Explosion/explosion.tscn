@@ -92,6 +92,7 @@ frame_progress = 0.14044921
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=722995565]
 stream = ExtResource("18_ylwia")
+max_polyphony = 2
 
 [node name="Area2D" type="Area2D" parent="." unique_id=16065288]
 collision_layer = 6

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c4cwr7vj03le7"]
+
+[ext_resource type="Texture2D" uid="uid://cvnl0xk00rone" path="res://Assets/you_died.png" id="1_4pnsc"]
+
+[sub_resource type="Theme" id="Theme_4pnsc"]
+
+[sub_resource type="Gradient" id="Gradient_1d6nr"]
+offsets = PackedFloat32Array(0.152, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n2kst"]
+gradient = SubResource("Gradient_1d6nr")
+fill_from = Vector2(1, 0.5086705)
+fill_to = Vector2(1, 1)
+repeat = 2
+metadata/_snap_count = 2
+
+[node name="DeathScreen" type="CanvasLayer" unique_id=1623280358]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1136976385]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4pnsc")
+texture = SubResource("GradientTexture2D_n2kst")
+
+[node name="YouDied" type="TextureRect" parent="." unique_id=1637176735]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.5
+offset_top = -288.5
+offset_right = 216.5
+offset_bottom = 288.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4pnsc")

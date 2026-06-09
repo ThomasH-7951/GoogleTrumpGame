@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://coop55xv2amm3"]
+
+[ext_resource type="Script" uid="uid://cevm86dar4g8h" path="res://Jeu/Trump/Pluie_Missiles/manager.gd" id="1_harus"]
+
+[node name="Manager" type="Node2D" unique_id=45865262]
+script = ExtResource("1_harus")

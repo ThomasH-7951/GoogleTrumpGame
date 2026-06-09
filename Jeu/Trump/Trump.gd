@@ -13,16 +13,22 @@ var hp = 200:
 			game_win()
 @export var speed := 600.0
 var jeff = preload("res://Jeu/Trump/Jeffrey/JeffreyEpstein.tscn")
-var jeff_encours: Node2D = null
+var jd = preload("res://Jeu/Trump/JDVance/JDvance.tscn")
+var invoc: Node2D = null
 const CENTRE := Vector2(570, 90)
 var path_follows : Array[PathFollow2D] = []
 var path_index := 0
 var en_transition := false
+var invoc_encours = false
 
 @onready var win_screen = $"../WinScreen"
 func game_win():
 	get_tree().paused = true
 	win_screen.show()
+
+# ==== ATTAQUE ====
+var manager_scene = preload("res://Jeu/Trump/Pluie_Missiles/manager.tscn")
+var manager : Node
 
 func _ready() -> void:
 	add_to_group("boss")
@@ -34,6 +40,10 @@ func _ready() -> void:
 		$PathCarre/TrumpPathFollow,
 		$PathRandom/TrumpPathFollow,
 	]
+	
+	manager = manager_scene.instantiate()
+	add_child(manager)
+	$Trumpsprite.animation = "default"
 	await get_tree().process_frame
 	lancer_phase()
 
@@ -44,20 +54,19 @@ func _process(delta: float):
 	if en_transition:
 		return
 	path_actif().progress += speed * delta
-	$PathCarre/TrumpPathFollow.global_position = path_actif().global_position
-	$PathCarre/TrumpPathFollow/Trumpsprite.play()
+	$Trumpsprite.global_position = path_actif().global_position
+	$Trumpsprite.play()
 
 func revenir_au_centre(prochain_index: int) -> void:
 	en_transition = true
 	while true:
-		var direction = CENTRE - $PathCarre/TrumpPathFollow.global_position
-		if direction.length() < 5.0:
-			$PathCarre/TrumpPathFollow.global_position = CENTRE
+		var direction = CENTRE - $Trumpsprite.global_position
+		if direction.length() < 20.0:
+			$Trumpsprite.global_position = CENTRE
 			break
-		$PathCarre/TrumpPathFollow.global_position += direction.normalized() * speed * get_process_delta_time()
-		$PathCarre/TrumpPathFollow/Trumpsprite.play()
+		$Trumpsprite.global_position += direction.normalized() * speed * get_process_delta_time()
 		await get_tree().process_frame
-	await get_tree().create_timer(2.0).timeout 
+	await get_tree().create_timer(2.0).timeout
 	path_index = prochain_index
 	path_follows[path_index].progress = 0.0
 	en_transition = false
@@ -65,40 +74,76 @@ func revenir_au_centre(prochain_index: int) -> void:
 func lancer_phase():
 	match phase_actuelle:
 		Phase.PHASE0:
-			spawner_zone_rouge()
-			await get_tree().create_timer(5.0).timeout
+			manager.spawner_zones()
+			await get_tree().create_timer(8.0).timeout
 			await revenir_au_centre(1)
 			phase_actuelle = Phase.PHASE1
 
 		Phase.PHASE1:
-			spawner_zone_rouge()
-			await get_tree().create_timer(5.0).timeout
+			manager.spawner_zones()
+			await attaque_JDV()
+			await get_tree().create_timer(8.0).timeout
+			
 			await revenir_au_centre(2)
 			phase_actuelle = Phase.PHASE2
 
 		Phase.PHASE2:
-			spawner_zone_rouge()
+			manager.spawner_zones()
 			await attaque_Jeffrey()
+			await get_tree().create_timer(8.0).timeout
 			await revenir_au_centre(3)
 			phase_actuelle = Phase.PHASE3
 
 		Phase.PHASE3:
-			spawner_zone_rouge()
-			await get_tree().create_timer(5.0).timeout
+			manager.spawner_zones()
+			await get_tree().create_timer(8.0).timeout
 			await revenir_au_centre(0)
 			phase_actuelle = Phase.PHASE0
 	lancer_phase()
 
 func attaque_Jeffrey():
-	if jeff_encours == null or not is_instance_valid(jeff_encours):
-		jeff_encours = jeff.instantiate()
-		add_child(jeff_encours)
-		jeff_encours.global_position = $PathCarre/TrumpPathFollow.global_position
-	await get_tree().create_timer(5.0).timeout
+	if invoc_encours == false:
+		invoc_encours=true
+		print("trump_i_encours")
+		speed = 0
+		await get_tree().create_timer(0.4).timeout
+		$Trumpsprite.animation = "invoc"
+		await get_tree().create_timer(0.4).timeout
+		invoc = jeff.instantiate()
+		add_child(invoc)
+		invoc.global_position =  $PathCarre/TrumpPathFollow.global_position
+		await get_tree().create_timer(0.4).timeout
+		
+		$Trumpsprite.animation = "default"
+		await get_tree().create_timer(0.4).timeout
+		speed=600
+		
+		invoc_encours=false
+		
+func attaque_JDV():
+	invoc_encours=true
+	print("trump_i_encours")
+	speed = 0
+	await get_tree().create_timer(0.4).timeout
+	$Trumpsprite.animation = "invoc"
+	await get_tree().create_timer(0.4).timeout
+	invoc = jd.instantiate()
+	add_child(invoc)
+	invoc.global_position = $PathCarre/TrumpPathFollow.global_position
+	await get_tree().create_timer(0.4).timeout
+	
+	$Trumpsprite.animation = "default"
+	await get_tree().create_timer(0.4).timeout
+	speed=600
+	
+	invoc_encours=false
 
 func spawner_zone_rouge() -> void:
-	var z = zone_rouge.instantiate()
-	get_tree().current_scene.add_child(z)
-	# Disparait après 3s
-	await get_tree().create_timer(3.0).timeout
-	z.queue_free()
+	if invoc_encours == false:
+		invoc_encours = true
+		var z = zone_rouge.instantiate()
+		get_tree().current_scene.add_child(z)
+		# Disparait après 3s
+		await get_tree().create_timer(3.0).timeout
+		invoc_encours = false
+		z.queue_free()

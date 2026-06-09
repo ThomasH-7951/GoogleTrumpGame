@@ -1,19 +1,27 @@
 [gd_scene format=3 uid="uid://cne5j6ua4tbdu"]
 
 [ext_resource type="Script" uid="uid://c4d65dh3bto5x" path="res://Jeu/Trump/Pluie_Missiles/Missile.gd" id="1_ri7kt"]
-[ext_resource type="Texture2D" uid="uid://j0o0oqxxvl81" path="res://Jeu/Trump/Pluie_Missiles/Missile.png" id="1_wuspj"]
+[ext_resource type="Texture2D" uid="uid://bc4p7hohmg4nd" path="res://Assets/missile.png" id="2_js5c3"]
+[ext_resource type="AudioStream" uid="uid://box3vw4xs0tsh" path="res://missile.ogg" id="3_js5c3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ri7kt"]
-size = Vector2(31, 200)
+size = Vector2(31, 16)
 
-[node name="Missile" type="Area2D" unique_id=1292174051]
+[node name="Missile" type="Area2D" unique_id=1292174051 groups=["Zone_Degats"]]
+collision_mask = 7
 script = ExtResource("1_ri7kt")
 
 [node name="Missile" type="Sprite2D" parent="." unique_id=1261373086]
+position = Vector2(-4.3343107e-13, 60.999996)
 rotation = -3.1415927
-scale = Vector2(0.3, 0.344)
-texture = ExtResource("1_wuspj")
+scale = Vector2(0.3554141, 0.344)
+texture = ExtResource("2_js5c3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1327886256]
-position = Vector2(0.5, 20)
+position = Vector2(0.5, 112)
 shape = SubResource("RectangleShape2D_ri7kt")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=4096654]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=760395274]
+stream = ExtResource("3_js5c3")

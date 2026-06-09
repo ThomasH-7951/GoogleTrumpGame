@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bnoa6cndpa7pp"]
+
+[ext_resource type="Script" uid="uid://benqdpw27sswq" path="res://Jeu/Trump/JDVance/j_dvance.gd" id="1_vvpyu"]
+[ext_resource type="Texture2D" uid="uid://bysc4seu5wid7" path="res://Assets/jdvance.png" id="2_k21hh"]
+[ext_resource type="AudioStream" uid="uid://dsgej4j3hn5u7" path="res://Jeu/Trump/Jeffrey/Jeffrey_Assets/je_damage.ogg" id="3_k21hh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jgx1i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_32gt2"]
+radius = 141.0
+
+[node name="JDvance" type="CharacterBody2D" unique_id=1861936898]
+collision_layer = 4
+script = ExtResource("1_vvpyu")
+
+[node name="JDVsprite" type="Sprite2D" parent="." unique_id=1000200767]
+texture = ExtResource("2_k21hh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1818594693]
+shape = SubResource("CircleShape2D_jgx1i")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1669896506 groups=["Zone_Degats"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=945318660]
+shape = SubResource("CircleShape2D_32gt2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=625816133]
+stream = ExtResource("3_k21hh")

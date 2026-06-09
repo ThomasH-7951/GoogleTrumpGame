@@ -7,7 +7,21 @@ script = ExtResource("1_mc6mt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1776731562]
 
+[node name="Label" type="Label" parent="CollisionShape2D" unique_id=2101323182]
+offset_left = -22.0
+offset_top = -102.0
+offset_right = 19.0
+offset_bottom = 103.0
+theme_override_colors/font_color = Color(1, 0.3254902, 0, 0.7137255)
+theme_override_font_sizes/font_size = 150
+text = "!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=104808258]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -19.0
+offset_top = -139.0
+offset_right = 21.0
+offset_bottom = -99.0
 color = Color(1, 1, 1, 0.63529414)
+metadata/_edit_use_anchors_ = true

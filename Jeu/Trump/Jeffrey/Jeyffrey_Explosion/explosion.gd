@@ -4,6 +4,11 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+	var rand = (randf()/5)+0.9
+	var rand2 = randi()%5
+	global_rotation=randi()%360
+	$AudioStreamPlayer.volume_db=rand2
+	$AudioStreamPlayer.pitch_scale=rand
 	$AudioStreamPlayer.play()
 	$AnimatedSprite2D.animation="default"
 	$AnimatedSprite2D.play()

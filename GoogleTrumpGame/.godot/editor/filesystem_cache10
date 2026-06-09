@@ -1,0 +1,31 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1779188273
+icon.svg::CompressedTexture2D::7418079300823305913::1779188158::1779188273::1::::<><><>0<>0<>602e96f782c14412d7e3384112bfc805<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Assets/::1779188932
+45_donald_trump.png::CompressedTexture2D::3031534894718550772::1779188158::1779188273::1::::<><><>0<>0<>2c40b91590617a53fa20f63c3071622d<>res://.godot/imported/45_donald_trump.png-20659c0580d2b4fe628e8f100dd9edb3.ctex::
+45_donald_trump_sprite2-removebg-preview.png::CompressedTexture2D::7021021756137535813::1779188158::1779188273::1::::<><><>0<>0<>7152ec92e8c17d77b5ba48e9fe75655b<>res://.godot/imported/45_donald_trump_sprite2-removebg-preview.png-4219405233ad214a6bea421e5eb6918a.ctex::
+arene_boss.png::CompressedTexture2D::3852666866232917740::1779188158::1779188273::1::::<><><>0<>0<>e74d623533f658ec89fd6e121602680c<>res://.godot/imported/arene_boss.png-9ef29d0ed82b88b5754401b9a489868b.ctex::
+down.png::CompressedTexture2D::9218544668750799361::1779188158::1779188273::1::::<><><>0<>0<>068423a39c2699704d238807c3a3fd11<>res://.godot/imported/down.png-85fe3305f05991c8be38a513db8f03c9.ctex::
+gtrump_sprite_2.png::CompressedTexture2D::3823417576579253605::1779188158::1779188273::1::::<><><>0<>0<>01c3b7ec5ec2eca47c1c6d3a22e37c36<>res://.godot/imported/gtrump_sprite_2.png-2a72c23c4a2a473983368da9e37160ff.ctex::
+idle2.png::CompressedTexture2D::3314284267493150680::1779188158::1779188273::1::::<><><>0<>0<>a6725a144c16cdb66383e8a0b22c6cf4<>res://.godot/imported/idle2.png-52199b4b2da6b0f02ba1038b41333ca3.ctex::
+idle 1.png::CompressedTexture2D::5764418798923217145::1779188158::1779188273::1::::<><><>0<>0<>1e819bc14793171adfc826f12eb56894<>res://.godot/imported/idle 1.png-e1f8bec4aa8e440df79cdb9422afee83.ctex::
+pen_death.png::CompressedTexture2D::7054730796604025847::1779188158::1779188273::1::::<><><>0<>0<>5a8686281f3145e93e504aa98f25514f<>res://.godot/imported/pen_death.png-d481bfe2741b43e6fb267f5b7575b3c7.ctex::
+side1.png::CompressedTexture2D::7489194137148409856::1779188158::1779188273::1::::<><><>0<>0<>1574ac0e635a021e00f1aadee4d640f9<>res://.godot/imported/side1.png-48a0060a87609de3b0a407fc7561df6d.ctex::
+side2.png::CompressedTexture2D::6450079714068695719::1779188158::1779188273::1::::<><><>0<>0<>d40de8e3a6dd8d3c51463a30ba765585<>res://.godot/imported/side2.png-781ac7729d1dc38757a75c0b892835cc.ctex::
+side3.png::CompressedTexture2D::399289569695741528::1779188158::1779188273::1::::<><><>0<>0<>8877b0a80aa994f8142bf8c1c29953af<>res://.godot/imported/side3.png-7882253b21f64b13a77bc9f1dd0b8ec6.ctex::
+trump boss-01.ogg::AudioStreamOggVorbis::6333139566462705403::1779188158::1779188272::1::::<><><>0<>0<>2d986d3518e45483b879823ccf71a03c<>res://.godot/imported/trump boss-01.ogg-fe59f82708d539bb9cb0cec6d80688f8.oggvorbisstr::
+up1.png::CompressedTexture2D::3830447536943808659::1779188158::1779188273::1::::<><><>0<>0<>4b67376f7a88b5ec4bfead203277dc36<>res://.godot/imported/up1.png-c149963d8e92987b2efeaaa9d155a673.ctex::
+up2.png::CompressedTexture2D::6705799364466936766::1779188158::1779188273::1::::<><><>0<>0<>1cd902ca824d952a2e854850acae5550<>res://.godot/imported/up2.png-d77ec1a3336b6174e800d0da82a49ab5.ctex::
+you_died.png::CompressedTexture2D::6274357751010789038::1779188932::1779188933::1::::<><><>0<>0<>734f87a8d6edcca6952541d00d859d27<>res://.godot/imported/you_died.png-1ec9a07e6c37c08e3759420bb29c7cd3.ctex::
+::res://Scenes/::1779188158
+joueurtest.tscn::PackedScene::8099755550851704115::1779188158::0::1::::<><><>0<>0<><>::uid://cm2pisdrbnhhh::::res://Scripts/joueurtest.gd<>uid://dex26y3u0uwo3::::res://Assets/side1.png<>uid://cx5p4ulairfnr::::res://Assets/side2.png<>uid://fxoigpnhbl7u::::res://Assets/side3.png<>uid://d4lsc36thxshd::::res://Assets/down.png<>uid://bnhp1o8is5syq::::res://Assets/idle2.png<>uid://coeleus13bkf6::::res://Assets/idle 1.png<>uid://butq58pwopnh0::::res://Assets/up1.png<>uid://c2slshnhetoly::::res://Assets/up2.png
+Level.tscn::PackedScene::1710045277010125124::1779188158::0::1::::<><><>0<>0<><>::uid://bu5i4ivmojr3i::::res://Assets/arene_boss.png<>uid://be1yym57ntdvv::::res://Scenes/mechanttest.tscn<>uid://dnnt144ejv6q6::::res://Scenes/joueurtest.tscn<>uid://bk62ldxc4fcyc::::res://Scenes/Pause.tscn
+mechanttest.tscn::PackedScene::2722350624827288531::1779188158::0::1::::<><><>0<>0<><>::uid://bjgq637d4wmoi::::res://Assets/45_donald_trump.png<>uid://buqdem8oi24tt::::res://Assets/gtrump_sprite_2.png<>uid://thk13grfgd6v::::res://Scripts/path_follow_2d_googletrump.gd<>uid://12mv3vp0grkh::::res://Scripts/mechant.gd
+Menu.tscn::PackedScene::2283879570843616934::1779188158::0::1::::<><><>0<>0<><>::uid://idl3mu4rixlt::::res://Scripts/menu.gd
+Pause.tscn::PackedScene::3153964026217302578::1779188158::0::1::::<><><>0<>0<><>::uid://3hpvyhyhvb1t::::res://Scripts/pause.gd
+::res://Scripts/::1779188158
+joueurtest.gd::GDScript::5671771682473914473::1779188158::0::1::::<>CharacterBody2D<><>0<>0<><>::
+mechant.gd::GDScript::1881415743343548671::1779188158::0::1::::<>Node2D<><>0<>0<><>::
+menu.gd::GDScript::568422434033183061::1779188158::0::1::::<>Control<><>0<>0<><>::
+path_follow_2d_googletrump.gd::GDScript::1348693754672180447::1779188158::0::1::::<>PathFollow2D<><>0<>0<><>::
+pause.gd::GDScript::1980687795181491299::1779188158::0::1::::<>CanvasLayer<><>0<>0<><>::

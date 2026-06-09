@@ -4,6 +4,7 @@ var speed = 2000
 var direction = Vector2.RIGHT
 
 func _ready():
+	$bulletsound.play()
 	global_scale = Vector2(0.05, 0.05)
 	body_entered.connect(_on_balle_body_entered)
 	area_entered.connect(_on_balle_area_entered)
