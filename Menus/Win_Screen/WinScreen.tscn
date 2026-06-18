@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dynidv8kyqspk"]
 
 [ext_resource type="Script" uid="uid://csusfbkpqce3q" path="res://Menus/Win_Screen/win_screen.gd" id="1_eyrxm"]
-[ext_resource type="Texture2D" uid="uid://cp32clgohg6pq" path="res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/Assets_Explosion/exp2_0.png" id="2_5a46c"]
+[ext_resource type="Texture2D" uid="uid://jmjwgriftug7" path="res://Assets/MenuBtn.png" id="2_eyrxm"]
 
 [sub_resource type="Gradient" id="Gradient_0hhjd"]
 offsets = PackedFloat32Array(0.14377682, 1)
@@ -52,12 +52,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = 154.0
-offset_right = 4.0
-offset_bottom = 162.0
+offset_left = -96.0
+offset_top = 107.0
+offset_right = 398.0
+offset_bottom = 348.0
 grow_horizontal = 2
 grow_vertical = 2
-icon = ExtResource("2_5a46c")
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("2_eyrxm")
 
 [connection signal="button_down" from="Button" to="." method="_on_menu_button_button_down"]
