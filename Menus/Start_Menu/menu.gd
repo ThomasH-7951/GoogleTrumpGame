@@ -10,6 +10,7 @@ func _input(event):
 		_on_start_btn_button_down()
 		
 func _on_quit_btn_button_down() -> void:
+	print("menu_quitter")
 	get_tree().quit()
 #func _process(delta: float) -> void:
 	#var randop = randf()

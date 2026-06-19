@@ -9,7 +9,7 @@ func _ready() -> void:
 	var taille = get_viewport_rect().size
 	hauteur = taille.y
 	x_zone = global_position.x
-	
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 	var rect = $ColorRect
 	rect.size = Vector2(largeur, hauteur)
 	rect.color = Color(1, 0, 0, 0.4)

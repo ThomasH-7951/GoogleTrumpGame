@@ -2,6 +2,8 @@ extends Node2D
 enum Phase {PHASE0, PHASE1, PHASE2, PHASE3}
 var phase_actuelle = Phase.PHASE0
 signal transition_finie
+var dialogue_scene = preload("res://Jeu/Trump/dialogue.tscn")
+@export var dialogue_index = 0
 var zone_rouge = preload("res://Jeu/Trump/Pluie_Missiles/Zone_Missiles.tscn")
 const max_hp = 200
 var hp = 200:
@@ -11,6 +13,15 @@ var hp = 200:
 		if hp <= 0:
 			print("boss mort !")
 			game_win()
+		$AudioStreamPlayer.play()
+		$Trumpsprite.animation="damage"
+		$Trumpsprite.modulate =  Color(1, 0.5, 0.5)
+		await get_tree().create_timer(0.4).timeout
+		$Trumpsprite.modulate =  Color(1, 1, 1)
+		if invoc_encours:
+			$Trumpsprite.animation = "invoc"
+		else:
+			$Trumpsprite.animation="default"
 @export var speed := 600.0
 var jeff = preload("res://Jeu/Trump/Jeffrey/JeffreyEpstein.tscn")
 var jd = preload("res://Jeu/Trump/JDVance/JDvance.tscn")
@@ -20,6 +31,7 @@ var path_follows : Array[PathFollow2D] = []
 var path_index := 0
 var en_transition := false
 var invoc_encours = false
+var touchable = true
 
 @onready var win_screen = $"../WinScreen"
 func game_win():
@@ -29,8 +41,15 @@ func game_win():
 # ==== ATTAQUE ====
 var manager_scene = preload("res://Jeu/Trump/Pluie_Missiles/manager.tscn")
 var manager : Node
-
+func ouvrir_dialogue(index):
+	var dialogue_active_scene = dialogue_scene.instantiate()
+	dialogue_active_scene.trump = self
+	$CanvasLayer.add_child(dialogue_active_scene)
+	
+	dialogue_index = index
+	
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 	add_to_group("boss")
 	$CanvasLayer/ProgressBar.max_value = max_hp
 	$CanvasLayer/ProgressBar.value = hp
@@ -74,10 +93,12 @@ func revenir_au_centre(prochain_index: int) -> void:
 func lancer_phase():
 	match phase_actuelle:
 		Phase.PHASE0:
+			ouvrir_dialogue(1)
 			manager.spawner_zones()
 			await get_tree().create_timer(8.0).timeout
 			await revenir_au_centre(1)
 			phase_actuelle = Phase.PHASE1
+			
 
 		Phase.PHASE1:
 			manager.spawner_zones()
@@ -93,6 +114,7 @@ func lancer_phase():
 			await get_tree().create_timer(8.0).timeout
 			await revenir_au_centre(3)
 			phase_actuelle = Phase.PHASE3
+			
 
 		Phase.PHASE3:
 			manager.spawner_zones()
@@ -106,37 +128,41 @@ func attaque_Jeffrey():
 		invoc_encours=true
 		print("trump_i_encours")
 		speed = 0
+		touchable = false
 		await get_tree().create_timer(0.4).timeout
 		$Trumpsprite.animation = "invoc"
 		await get_tree().create_timer(0.4).timeout
 		invoc = jeff.instantiate()
 		add_child(invoc)
-		invoc.global_position =  $PathCarre/TrumpPathFollow.global_position
+		invoc.global_position =  $Trumpsprite.global_position
 		await get_tree().create_timer(0.4).timeout
 		
 		$Trumpsprite.animation = "default"
 		await get_tree().create_timer(0.4).timeout
 		speed=600
+		touchable=true
 		
 		invoc_encours=false
 		
 func attaque_JDV():
-	invoc_encours=true
-	print("trump_i_encours")
-	speed = 0
-	await get_tree().create_timer(0.4).timeout
-	$Trumpsprite.animation = "invoc"
-	await get_tree().create_timer(0.4).timeout
-	invoc = jd.instantiate()
-	add_child(invoc)
-	invoc.global_position = $PathCarre/TrumpPathFollow.global_position
-	await get_tree().create_timer(0.4).timeout
-	
-	$Trumpsprite.animation = "default"
-	await get_tree().create_timer(0.4).timeout
-	speed=600
-	
-	invoc_encours=false
+	if invoc_encours == false:
+		invoc_encours=true
+		print("trump_i_encours")
+		speed = 0
+		touchable = false
+		await get_tree().create_timer(0.4).timeout
+		$Trumpsprite.animation = "invoc"
+		await get_tree().create_timer(0.4).timeout
+		invoc = jd.instantiate()
+		add_child(invoc)
+		invoc.global_position = $Trumpsprite.global_position
+		await get_tree().create_timer(0.4).timeout
+		
+		$Trumpsprite.animation = "default"
+		await get_tree().create_timer(0.4).timeout
+		speed=600
+		touchable=true
+		invoc_encours=false
 
 func spawner_zone_rouge() -> void:
 	if invoc_encours == false:

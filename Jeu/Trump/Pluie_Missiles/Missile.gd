@@ -7,7 +7,7 @@ var explosion_scene = preload("res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/explos
 
 
 func _ready() -> void:
-	
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 	var randm = (randf()*40)-40
 	var randm2 = (randf()*0.4)+0.8
 	$AudioStreamPlayer.pitch_scale=randm2

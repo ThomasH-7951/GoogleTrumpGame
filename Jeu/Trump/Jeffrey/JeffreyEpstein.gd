@@ -12,6 +12,7 @@ var is_waiting := false
 var is_foncing := false
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 	global_scale=Vector2(1,1)
 	await get_tree().process_frame
 	player = get_tree().get_first_node_in_group("player") as CharacterBody2D

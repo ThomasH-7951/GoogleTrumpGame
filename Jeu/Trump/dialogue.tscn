@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cn3jyfvfcdcau"]
+
+[ext_resource type="Script" uid="uid://s314tbjfvy00" path="res://Jeu/Trump/dialogues_trump.gd" id="1_h8gwi"]
+[ext_resource type="Texture2D" uid="uid://ds3qasyh27f4d" path="res://Jeu/Trump/Assets_Trump/box.png" id="2_mi7xf"]
+[ext_resource type="Texture2D" uid="uid://8mgkcjwaxt6y" path="res://Jeu/Trump/Assets_Trump/trump_ezolère.png" id="3_2kxsf"]
+[ext_resource type="Texture2D" uid="uid://bjgq637d4wmoi" path="res://Jeu/Trump/Assets_Trump/45_donald_trump.png" id="4_n5n8t"]
+[ext_resource type="Texture2D" uid="uid://dvyqboks2xu44" path="res://Jeu/Trump/Assets_Trump/trump_lol.png" id="5_hmi5h"]
+[ext_resource type="Texture2D" uid="uid://dy4p6b8mq3wgn" path="res://Jeu/Trump/Assets_Trump/trump_de.png" id="6_l25b7"]
+[ext_resource type="FontFile" uid="uid://b0iei05vxvr17" path="res://Assets/Pixellari.ttf" id="7_tshp8"]
+[ext_resource type="AudioStream" uid="uid://417fnn6q04m1" path="res://Assets/trump_voice.ogg" id="8_w5wfk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2mlh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2kxsf")
+}],
+"loop": true,
+"name": &"col",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_n5n8t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_hmi5h")
+}],
+"loop": true,
+"name": &"mech",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_l25b7")
+}],
+"loop": true,
+"name": &"trist",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control" unique_id=1037654581]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h8gwi")
+metadata/_edit_vertical_guides_ = [580.0]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=246133487]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -330.0
+offset_top = -254.0
+offset_right = 328.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_mi7xf")
+expand_mode = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1110474220]
+position = Vector2(331, 510.99997)
+scale = Vector2(0.24310777, 0.24310777)
+sprite_frames = SubResource("SpriteFrames_g2mlh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=471438752]
+layout_mode = 0
+offset_left = 404.00003
+offset_top = 407.0
+offset_right = 886.0
+offset_bottom = 616.0
+theme_override_constants/line_separation = 1
+theme_override_fonts/normal_font = ExtResource("7_tshp8")
+theme_override_font_sizes/normal_font_size = 24
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt, elit eget sollicitudin varius, diam mauris imperdiet arcu, ut commodo ex risus vitae lacus. Vestibulum justo magna, faucibus vel facilisis in, pharetra lobortis lorem. Proin faucibus diam vitae mi placerat dictum. "
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1432045444]
+stream = ExtResource("8_w5wfk")
+autoplay = true

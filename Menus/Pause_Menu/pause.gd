@@ -3,9 +3,11 @@ extends CanvasLayer
 func pause_unpaused():
 	if get_tree().paused:
 		get_tree().paused = false
+		print("depaused")
 		hide()
 	else:
 		get_tree().paused = true
+		print("paused")
 		show()
 
 func _ready() -> void:

@@ -5,12 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://b1escw8l1lxbh" path="res://Jeu/Trump/Assets_Trump/bossbarempty.png" id="4_103ns"]
 [ext_resource type="Texture2D" uid="uid://c7bbg5eu1wbwf" path="res://Jeu/Trump/Assets_Trump/45_donald_trump2.png" id="4_5056c"]
 [ext_resource type="Texture2D" uid="uid://cc2138tohl31w" path="res://Jeu/Trump/Assets_Trump/bossbarfull.png" id="5_jlqfk"]
+[ext_resource type="Texture2D" uid="uid://brf1i51pucccs" path="res://Jeu/Trump/Assets_Trump/trump_ezolère2.png" id="6_7ou75"]
 [ext_resource type="FontFile" uid="uid://b0iei05vxvr17" path="res://Assets/Pixellari.ttf" id="6_jlqfk"]
 [ext_resource type="Texture2D" uid="uid://c0bhisqfm8uws" path="res://Jeu/Trump/Assets_Trump/trumpattack.png" id="7_i3tp2"]
+[ext_resource type="AudioStream" uid="uid://417fnn6q04m1" path="res://Assets/trump_voice.ogg" id="8_uixkt"]
+[ext_resource type="Texture2D" uid="uid://8mgkcjwaxt6y" path="res://Jeu/Trump/Assets_Trump/trump_ezolère.png" id="10_yffnp"]
 
 [sub_resource type="Curve2D" id="Curve2D_cf1iw"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 513, 80, 0, 0, 0, 0, 80, 80, 0, 0, 0, 0, 80, 460, 0, 0, 0, 0, 950, 460, 0, 0, 0, 0, 950, 80, 0, 0, 0, 0, 513, 80)
+"points": PackedVector2Array(0, 0, 0, 0, 513, 80.09451, 0, 0, 0, 0, 80, 80, 0, 0, 0, 0, 80, 460, 0, 0, 0, 0, 950, 460, 0, 0, 0, 0, 950, 80, 0, 0, 0, 0, 513, 80)
 }
 point_count = 6
 
@@ -26,6 +29,17 @@ region = Rect2(0, 0, 798, 798)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cf1iw"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_yffnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7ou75")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ypjg6")
@@ -50,12 +64,6 @@ animations = [{
 radius = 43.028442
 height = 122.0141
 
-[sub_resource type="Curve2D" id="Curve2D_1vuap"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 570, 90, 0, 0, 0, 0, 770, 550, 0, 0, 0, 0, 970, 90, 0, 0, 0, 0, 970, 550, 0, 0, 0, 0, 770, 90, 0, 0, 0, 0, 570, 550, 0, 0, 0, 0, 370, 90, 0, 0, 0, 0, 170, 550, 0, 0, 0, 0, 170, 90, 0, 0, 0, 0, 370, 550, 0, 0, 0, 0, 570, 90)
-}
-point_count = 11
-
 [node name="Trump" type="Node2D" unique_id=1640832070]
 position = Vector2(1, 2)
 script = ExtResource("1_keihd")
@@ -67,7 +75,7 @@ scale = Vector2(1.111111, 1.1860987)
 curve = SubResource("Curve2D_cf1iw")
 
 [node name="TrumpPathFollow" type="PathFollow2D" parent="PathCarre" unique_id=1329641508]
-position = Vector2(513, 80)
+position = Vector2(513, 80.09451)
 rotation = 2.6183143
 rotates = false
 
@@ -92,6 +100,7 @@ offset_bottom = 45.0
 grow_horizontal = 2
 scale = Vector2(5, 5)
 size_flags_vertical = 4
+value = 100.0
 nine_patch_stretch = true
 texture_under = ExtResource("4_103ns")
 texture_progress = ExtResource("5_jlqfk")
@@ -113,7 +122,8 @@ text = "GOOGLE TRUMP"
 position = Vector2(569.9999, 94.8879)
 scale = Vector2(0.16986904, 0.18207657)
 sprite_frames = SubResource("SpriteFrames_cf1iw")
-animation = &"invoc"
+animation = &"damage"
+frame_progress = 0.2836397
 
 [node name="Zone_Colision_Trump" type="Area2D" parent="Trumpsprite" unique_id=214030229 groups=["Zone_Degats"]]
 position = Vector2(0.00024414063, 0)
@@ -122,5 +132,9 @@ scale = Vector2(6.534328, 6.5209637)
 skew = -0.0035412312
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trumpsprite/Zone_Colision_Trump" unique_id=868154459]
+visible = false
 rotation = 3.6750863
 shape = SubResource("CapsuleShape2D_56cqh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1684471660]
+stream = ExtResource("8_uixkt")

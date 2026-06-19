@@ -14,7 +14,7 @@ func _ready() -> void:
 	$"../DeathScreen".process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 
 func _on_restart_btn_button_down() -> void:
-	print("la")
+	print("death_screen_quitter")
 	
 	get_tree().change_scene_to_file("res://Menus/Start_Menu/Menu.tscn")
 	
