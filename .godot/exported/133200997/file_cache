@@ -1,0 +1,17 @@
+res://Jeu/Joueur/Projectiles/Projectile-Joueur.tscn::378dee7f5d9690f9ac015c8e29090de8::1781785184::res://.godot/exported/133200997/export-f0bfd07ae4e1ead8a9179578270b0e07-Projectile-Joueur.scn
+res://Jeu/Joueur/Joueur.tscn::869d55525851b2492da06b3ebbf0ade2::1781786846::res://.godot/exported/133200997/export-536b1c9f2b1523937423798b92a6adff-Joueur.scn
+res://Jeu/Trump/JDVance/JDvance.tscn::ae39b84060528c5b237905c571c4b5a9::1781785184::res://.godot/exported/133200997/export-73749dfa2f6c8f0a63d8d648b65a8c35-JDvance.scn
+res://Jeu/Trump/Jeffrey/Jeyffrey_Explosion/explosion.tscn::3239290e1a7aebd8a674ba19fdf82cd9::1781785184::res://.godot/exported/133200997/export-867e737e31bc593b795fe331b73d3e6b-explosion.scn
+res://Jeu/Trump/Jeffrey/JeffreyEpstein.tscn::7bf0d0c67063c2031b9606943310e98d::1781785184::res://.godot/exported/133200997/export-8cc1f03c8825c6b0465b6a6c1f6b28b1-JeffreyEpstein.scn
+res://Jeu/Trump/Pluie_Missiles/Manager.tscn::5df06127bd70859551549a9615fd72d4::1781785184::res://.godot/exported/133200997/export-e33aa34429623361c80138c33dfbe837-Manager.scn
+res://Jeu/Trump/Pluie_Missiles/Missile.tscn::8bedaa1b370f3edf9c97e078f9e6e946::1781785184::res://.godot/exported/133200997/export-de20f6919f705473645d3c6489a3fe57-Missile.scn
+res://Jeu/Trump/Pluie_Missiles/Zone_Missiles.tscn::d4d84e32222266a01dcd2ec49b850b5a::1781902611::res://.godot/exported/133200997/export-2be9dd5de72f4d4242683b27282f8db9-Zone_Missiles.scn
+res://Jeu/Trump/mechanttest.tscn::d0ec3b6517b6f1fd863e15b0adde947a::1781785184::res://.godot/exported/133200997/export-8920fcca9cb8b855afacaf9b9d2180eb-mechanttest.scn
+res://Jeu/Trump/trump.tscn::af313cf947c533715f64998d91dae26b::1781902612::res://.godot/exported/133200997/export-a6784f2e26e2253c8aaa83e4cc694643-trump.scn
+res://Jeu/Level.tscn::e46b70d661c5a258ca2162bf6685858f::1781785184::res://.godot/exported/133200997/export-dc09189fe3287ab7f55e89a4f53bac81-Level.scn
+res://Menus/Death_Screen/DeathScreen.tscn::5eb4a61c2c6e98a9a8271cf2665e391e::1781902612::res://.godot/exported/133200997/export-91b2ee873485f1099049acc43c57917a-DeathScreen.scn
+res://Menus/Pause_Menu/Pause.tscn::5a584cc4c00289feb4b71e239075e5e6::1781785184::res://.godot/exported/133200997/export-c27b69c0539fe2a94711d495e7383b82-Pause.scn
+res://Menus/Prologue/prologue.tscn::dedbb73c3ccfad176dc7aaf545903f4b::1781785184::res://.godot/exported/133200997/export-0ff9a48a30aa008bd85cde3af67b4b3e-prologue.scn
+res://Menus/Start_Menu/Menu.tscn::4c6efe68799e3d8e6c47dab2d4afd74b::1781903360::res://.godot/exported/133200997/export-11529f86444d72c0b3b05c108f0b816a-Menu.scn
+res://Menus/Win_Screen/WinScreen.tscn::523eb9f5fddc646d25e48b216f34db01::1781902612::res://.godot/exported/133200997/export-80161849ed079ebd673f0f58a8ec5afa-WinScreen.scn
+res://Jeu/Trump/dialogue.tscn::ad98710a79964f8c69c2f7e28baf099a::1781902611::res://.godot/exported/133200997/export-140d115ac80d8efe5394c7169fd8ef6d-dialogue.scn

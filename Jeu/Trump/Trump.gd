@@ -41,7 +41,7 @@ func game_win():
 	win_screen.show()
 
 # ==== ATTAQUE ====
-var manager_scene = preload("res://Jeu/Trump/Pluie_Missiles/manager.tscn")
+var manager_scene = preload("res://Jeu/Trump/Pluie_Missiles/Manager.tscn")
 var manager : Node
 func ouvrir_dialogue(index):
 	var dialogue_active_scene = dialogue_scene.instantiate()
