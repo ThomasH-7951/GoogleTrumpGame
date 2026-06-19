@@ -20,7 +20,7 @@ func _ready() -> void:
 	print("player =", player)
 	sprite.play()
 	sprite.animation = "default"
-	await get_tree().create_timer(0.4).timeout
+	await get_tree().create_timer(0.4, false, false).timeout
 	preparer_fonce()
  
 func preparer_fonce() -> void:
@@ -38,9 +38,9 @@ func preparer_fonce() -> void:
 func clignoter() -> void:
 		for i in 4:
 			sprite.modulate.a = 0.2
-			await get_tree().create_timer(0.05).timeout
+			await get_tree().create_timer(0.05, false, false).timeout
 			sprite.modulate.a = 1.0
-			await get_tree().create_timer(0.05).timeout
+			await get_tree().create_timer(0.05, false, false).timeout
 func _physics_process(delta: float) -> void:
 	if player == null:
 		return
@@ -60,9 +60,9 @@ func _physics_process(delta: float) -> void:
 				sprite.animation = "damage"
 				sprite.modulate = Color(1, 0.5, 0.5)
 				print("je_touche le mur, attente 0.5s")
-				await get_tree().create_timer(0.5).timeout
+				await get_tree().create_timer(0.5, false, false).timeout
 				sprite.modulate = Color(1, 1, 1)
-				await get_tree().create_timer(0.5).timeout
+				await get_tree().create_timer(0.5, false, false).timeout
 				preparer_fonce()
 				hp=hp-1
 			else:
@@ -75,7 +75,7 @@ func _physics_process(delta: float) -> void:
 				explosion.global_position=hit_pos
 				$Je_sprite.hide()
 				speed=0
-				await get_tree().create_timer(0.4).timeout
+				await get_tree().create_timer(0.4, false, false).timeout
 				queue_free()
 			
 

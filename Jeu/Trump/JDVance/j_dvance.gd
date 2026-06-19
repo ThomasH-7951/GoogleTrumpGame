@@ -20,7 +20,7 @@ func _ready() -> void:
 
 func clignoter() -> void:
 	sprite.modulate.a = 0.2
-	await get_tree().create_timer(0.05).timeout
+	await get_tree().create_timer(0.05, false).timeout
 	sprite.modulate.a = 1.0
 
 func _physics_process(delta: float) -> void:
@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 			clignoter()
 			sprite.modulate = Color(1, 0.5, 0.5)
 			print("jdv_touche le mur")
-			await get_tree().create_timer(0.05).timeout
+			await get_tree().create_timer(0.05, false).timeout
 			sprite.modulate = Color(1, 1, 1)
 		else:
 			dead = true
@@ -56,5 +56,5 @@ func _physics_process(delta: float) -> void:
 
 			sprite.hide()
 			speed = 0
-			await get_tree().create_timer(0.4).timeout
+			await get_tree().create_timer(0.4, false).timeout
 			queue_free()

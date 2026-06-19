@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://chs3is3r5akj8"]
 
 [ext_resource type="Script" uid="uid://dwvj8a2aal7xd" path="res://Jeu/Trump/Pluie_Missiles/zone_missiles.gd" id="1_mc6mt"]
+[ext_resource type="AudioStream" uid="uid://c1gv0f3ewqehm" path="res://Assets/alert.mp3" id="2_307kj"]
 
 [node name="ZoneMissiles" type="Area2D" unique_id=583573044]
 script = ExtResource("1_mc6mt")
@@ -25,3 +26,6 @@ offset_right = 21.0
 offset_bottom = -99.0
 color = Color(1, 1, 1, 0.63529414)
 metadata/_edit_use_anchors_ = true
+
+[node name="alert" type="AudioStreamPlayer" parent="." unique_id=631115314]
+stream = ExtResource("2_307kj")

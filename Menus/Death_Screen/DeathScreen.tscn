@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dhv33vasdq3tv" path="res://Menus/Death_Screen/death_screen.gd" id="1_1d6nr"]
 [ext_resource type="Texture2D" uid="uid://cvnl0xk00rone" path="res://Menus/Death_Screen/Death_Screen_Assets/you_died.png" id="1_4pnsc"]
-[ext_resource type="Texture2D" uid="uid://jmjwgriftug7" path="res://Assets/MenuBtn.png" id="3_lr1f1"]
+[ext_resource type="FontFile" uid="uid://b0iei05vxvr17" path="res://Assets/Pixellari.ttf" id="3_lr1f1"]
 [ext_resource type="AudioStream" uid="uid://xapj7gcpneql" path="res://Menus/Death_Screen/Death_Screen_Assets/winerr.ogg" id="4_n2kst"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n2kst"]
@@ -34,10 +34,12 @@ offset_bottom = 370.99994
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0.5294118)
+theme_override_fonts/font = ExtResource("3_lr1f1")
 theme_override_font_sizes/font_size = 127
 theme_override_styles/normal = SubResource("StyleBoxEmpty_n2kst")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_phjal")
-icon = ExtResource("3_lr1f1")
+text = "Menu"
 autowrap_mode = 1
 expand_icon = true
 

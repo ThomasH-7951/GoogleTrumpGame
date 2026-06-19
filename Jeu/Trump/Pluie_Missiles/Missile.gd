@@ -33,7 +33,7 @@ func _on_missile_body_entered(body: Node2D) -> void:
 			$Missile.hide()
 			monitoring = false
 			
-			await get_tree().create_timer(0.4).timeout
+			await get_tree().create_timer(0.4, false).timeout
 			print("je_free")
 			queue_free()
 	if body.is_in_group("Joueur"):
@@ -48,7 +48,7 @@ func _on_missile_body_entered(body: Node2D) -> void:
 		$Missile.hide()
 		monitoring = false
 		
-		await get_tree().create_timer(0.4).timeout
+		await get_tree().create_timer(0.4, false).timeout
 		print("je_free")
 		queue_free()
 

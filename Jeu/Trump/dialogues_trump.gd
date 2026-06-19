@@ -11,13 +11,16 @@ var dialogue = [
 		"dialogue_0_2"
 	],
 	[
-		"We will make america great again"
+		"We will make america great again!"
 	],
 	["Les réfrégirateurs sont moins chers chez but!",
 	"Si juvabien, c'est Juvamine!",
 	"Entrez dans Xar saroth"
-	]
+	],
+	
+	["Noooooo!","You can not...", "YOU CAN NOT BEAT ME!", "I...", "WILL...", "COME...", "* pouf *"]
 ]
+
 
 
 func _ready() -> void:
@@ -26,7 +29,7 @@ func _ready() -> void:
 	print("index : ",dialogue_index)
 	print(dialogue)
 	get_tree().paused = true
-	print(dialogue[0])
+	
 	print(dialogue[0][0])
 	
 	
@@ -35,6 +38,17 @@ var char_delay := 0.05
 var char_timer := 0.0
 
 func _process(delta: float) -> void:
+	if dialogue_index==1:
+		$AnimatedSprite2D.animation="mech"
+	if dialogue_index==3:
+		print("dialogue_index : ", dialogue_index)
+		print("dialogue_subindex : ", dialogue_subindex)
+		if dialogue_subindex==1:
+			$AnimatedSprite2D.animation="trescol"
+		if dialogue_subindex==6:
+			$AnimatedSprite2D.animation="col"
+		if dialogue_subindex==7:
+			$AnimatedSprite2D.animation="mort"
 	if dialogue_subindex == 0:
 		dialogue_index = trump.dialogue_index
 		$RichTextLabel.text = dialogue[dialogue_index][dialogue_subindex]

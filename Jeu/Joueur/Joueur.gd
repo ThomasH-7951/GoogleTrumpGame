@@ -40,9 +40,9 @@ func _ready():
 func clignoter() -> void:
 		for i in 8:
 			$playersprite.modulate.a = 0.2
-			await get_tree().create_timer(0.05).timeout
+			await get_tree().create_timer(0.05, false).timeout
 			$playersprite.modulate.a = 1.0
-			await get_tree().create_timer(0.05).timeout
+			await get_tree().create_timer(0.05, false).timeout
 
 func _physics_process(delta: float) -> void:
 
@@ -98,10 +98,10 @@ func _physics_process(delta: float) -> void:
 			can_move = false
 			$playersprite.animation = "damage"
 			$playersprite.pause()
-			await get_tree().create_timer(0.2).timeout
+			await get_tree().create_timer(0.2, false).timeout
 			can_move = true
 			clignoter()
-			await get_tree().create_timer(0.8).timeout
+			await get_tree().create_timer(0.8, false).timeout
 			can_take_damage = true
 			$playersprite.play()
 	if Input.is_action_pressed("Shooting") and can_shoot:
@@ -109,7 +109,7 @@ func _physics_process(delta: float) -> void:
 		Projectile_Instance.global_position = Shooting_Point.global_position
 		owner.add_child(Projectile_Instance)
 		can_shoot = false
-		await get_tree().create_timer(0.1).timeout
+		await get_tree().create_timer(0.1, false).timeout
 		can_shoot = true
 
 func update_coeurs():

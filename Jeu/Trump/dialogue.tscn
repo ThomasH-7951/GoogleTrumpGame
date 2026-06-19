@@ -5,7 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://8mgkcjwaxt6y" path="res://Jeu/Trump/Assets_Trump/trump_ezolère.png" id="3_2kxsf"]
 [ext_resource type="Texture2D" uid="uid://bjgq637d4wmoi" path="res://Jeu/Trump/Assets_Trump/45_donald_trump.png" id="4_n5n8t"]
 [ext_resource type="Texture2D" uid="uid://dvyqboks2xu44" path="res://Jeu/Trump/Assets_Trump/trump_lol.png" id="5_hmi5h"]
+[ext_resource type="Texture2D" uid="uid://b357i67xwn3uw" path="res://Assets/mort.png" id="6_2kxsf"]
 [ext_resource type="Texture2D" uid="uid://dy4p6b8mq3wgn" path="res://Jeu/Trump/Assets_Trump/trump_de.png" id="6_l25b7"]
+[ext_resource type="Texture2D" uid="uid://bwlnpf5apqbk7" path="res://Assets/trump_ezolère2.png" id="6_mi7xf"]
 [ext_resource type="FontFile" uid="uid://b0iei05vxvr17" path="res://Assets/Pixellari.ttf" id="7_tshp8"]
 [ext_resource type="AudioStream" uid="uid://417fnn6q04m1" path="res://Assets/trump_voice.ogg" id="8_w5wfk"]
 
@@ -37,10 +39,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_2kxsf")
+}],
+"loop": true,
+"name": &"mort",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_mi7xf")
+}],
+"loop": true,
+"name": &"trescol",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("6_l25b7")
 }],
 "loop": true,
 "name": &"trist",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"vide",
 "speed": 5.0
 }]
 

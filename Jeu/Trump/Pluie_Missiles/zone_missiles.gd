@@ -19,8 +19,8 @@ func _ready() -> void:
 	shape.size = Vector2(largeur, hauteur)
 	$CollisionShape2D.shape = shape
 	$CollisionShape2D.position = Vector2(largeur / 2, hauteur / 2)
-	
-	await get_tree().create_timer(2.0).timeout
+	$alert.play()
+	await get_tree().create_timer(2.0, false).timeout
 	spawner_missiles()
 
 func spawner_missiles() -> void:
@@ -33,7 +33,8 @@ func spawner_missiles() -> void:
 		var x = x_zone + randf_range(0, largeur)
 		m.global_position = Vector2(x, -50)
 		var cust_i = (randf()*0.04)+0.08
-		await get_tree().create_timer(cust_i).timeout
+		await get_tree().create_timer(cust_i, false).timeout
 		temps += cust_i
 	
+	$alert.stop()
 	queue_free()

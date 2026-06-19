@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dynidv8kyqspk"]
 
 [ext_resource type="Script" uid="uid://csusfbkpqce3q" path="res://Menus/Win_Screen/win_screen.gd" id="1_eyrxm"]
-[ext_resource type="Texture2D" uid="uid://jmjwgriftug7" path="res://Assets/MenuBtn.png" id="2_eyrxm"]
+[ext_resource type="FontFile" uid="uid://b0iei05vxvr17" path="res://Assets/Pixellari.ttf" id="2_eyrxm"]
 
 [sub_resource type="Gradient" id="Gradient_0hhjd"]
-offsets = PackedFloat32Array(0.14377682, 1)
-colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+offsets = PackedFloat32Array(0.18947369, 0.99649125)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_0rred"]
 gradient = SubResource("Gradient_0hhjd")
@@ -19,6 +19,11 @@ font_color = Color(0, 1, 1, 1)
 outline_size = 23
 shadow_size = 32
 shadow_color = Color(0.9882353, 0, 0, 1)
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eyrxm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5a46c"]
 
 [node name="WinScreen" type="CanvasLayer" unique_id=748140998]
 script = ExtResource("1_eyrxm")
@@ -43,8 +48,9 @@ offset_right = 273.0
 offset_bottom = 55.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "YOUUU WIIIIN"
+text = "YOU WIN !"
 label_settings = SubResource("LabelSettings_eyrxm")
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=354806512]
 anchors_preset = 8
@@ -59,6 +65,11 @@ offset_bottom = 348.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.4, 0.4)
-icon = ExtResource("2_eyrxm")
+theme_override_colors/font_color = Color(1, 1, 1, 0.5686275)
+theme_override_fonts/font = ExtResource("2_eyrxm")
+theme_override_font_sizes/font_size = 128
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eyrxm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5a46c")
+text = "Menu"
 
 [connection signal="button_down" from="Button" to="." method="_on_menu_button_button_down"]
